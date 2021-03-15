@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#8483f3"
+    tools:context=".EdevnLoginActivity">
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/login_head_text"
+        android:layout_marginBottom="30dp"
+        android:textSize="40dp"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:textSize="20dp"
+        android:backgroundTint="#4267b2"
+        android:text="join with facebook"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_height="80dp"/>
+
+    <Button
+        android:layout_width="350dp"
+        android:textSize="20dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="join with google"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_height="80dp"/>
+
+    <Button
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_width="350dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="join with apple"
+        android:textAllCaps="true"
+        android:layout_height="80dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textSize="30dp"
+        android:textColor="@color/white"/>
+    <EditText
+        android:layout_width="345dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:backgroundTint="null"
+        android:hint="Email address or Phone number"
+        android:background="@drawable/edit_text_border"
+        android:layout_height="70dp"
+        android:inputType="text"/>
+    <Button
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#f0638a"
+        android:textColor="@color/white"
+        android:layout_width="350dp"
+        android:textSize="20dp"
+        android:text="continue"
+        android:textAllCaps="true"
+        android:layout_height="80dp"/>
+
+</LinearLayout>

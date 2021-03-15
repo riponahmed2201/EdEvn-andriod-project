@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EdEVN">
+        <activity android:name=".WaitActivity"></activity>
+        <activity android:name=".ClassSelectActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".EdevnLoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
