@@ -1,14 +1,14 @@
-package com.example.edevn;
+package com.example.edevnlive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class WaitActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wait);
+        setContentView(R.layout.activity_main);
     }
 }

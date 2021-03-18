@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "EdEVN"
+rootProject.name = "EdevnLive"

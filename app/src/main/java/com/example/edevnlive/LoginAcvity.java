@@ -1,14 +1,14 @@
-package com.example.edevn;
+package com.example.edevnlive;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EdevnLoginActivity extends AppCompatActivity {
+public class LoginAcvity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edevn_login);
+        setContentView(R.layout.activity_login_acvity);
     }
 }

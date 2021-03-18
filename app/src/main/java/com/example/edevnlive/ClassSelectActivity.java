@@ -1,4 +1,4 @@
-package com.example.edevn;
+package com.example.edevnlive;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,10 +1,7 @@
 <resources>
-    <string name="app_name">EdEVN</string>
-    <string name="login_head_text">Please join <b>EDEVN</b> to start learning</string>
-
-    <string name="welcome_edevn_layout">
-        What is edevn in 2 line. Lorem ipsum is simply dummpy text of the printing and typesetting industry
+    <string name="app_name">EdevnLive</string>
+    <string name="login_text">Please join <b>EDEVN</b> to start learning. </string>
+    <string name="welcome_screen_long_text">
+       What is edevn in 2 line. Lorem ipsum is simply dummy text of the printing and typesetting industry.
     </string>
-
-    <string name="login_wait">Please wait, while we are building your class room.</string>
 </resources>

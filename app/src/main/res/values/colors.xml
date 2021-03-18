@@ -7,5 +7,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="edevn_bg_color">#7d7cef</color>
+    <color name="edevn_bg">#7d7cef</color>
 </resources>

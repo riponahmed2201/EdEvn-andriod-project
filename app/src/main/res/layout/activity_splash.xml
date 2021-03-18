@@ -5,28 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/edevn_bg"
     android:orientation="vertical"
-    tools:context=".WelcomeActivity">
+    android:background="#7d7cef"
+    tools:context=".SplashActivity">
 
-    <TextView
-        android:textSize="30sp"
+    <ImageView
+        android:background="@mipmap/ic_launcher"
         android:layout_width="wrap_content"
-        android:text="Welcome To EDEVN"
-        android:textColor="@color/white"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"/>
     <TextView
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_width="300dp"
-        android:text="@string/welcome_screen_long_text"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#f0638a"
-        android:text="Continue"
         android:layout_width="wrap_content"
+        android:text="EDEVN"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="40sp"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

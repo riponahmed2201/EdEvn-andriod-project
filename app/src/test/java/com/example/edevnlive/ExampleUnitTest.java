@@ -1,4 +1,4 @@
-package com.example.edevn;
+package com.example.edevnlive;
 
 import org.junit.Test;
 
