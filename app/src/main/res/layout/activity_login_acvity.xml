@@ -14,11 +14,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
+        android:id="@+id/login_with_facebook_id"
         android:background="#4267b2"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -40,6 +42,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
+            android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="10dp"
             android:textSize="20sp"
             android:layout_gravity="center"
@@ -51,6 +54,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/login_with_google_id"
         android:background="#ffffff"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -75,6 +79,7 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:text="join with google"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/black"
             android:textAllCaps="true"
             android:layout_width="wrap_content"
@@ -82,6 +87,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/login_with_apple_id"
         android:background="#ffffff"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -106,6 +112,7 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:text="join with apple"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/black"
             android:textAllCaps="true"
             android:layout_width="wrap_content"
@@ -133,6 +140,7 @@
             android:textSize="20sp"
             android:textColor="@color/white"
             android:text="or"
+            android:fontFamily="@font/roboto_regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
 
@@ -144,6 +152,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/login_email_or_phone_number_id"
         android:background="@drawable/edit_text_border"
         android:gravity="center"
         android:textColorHint="@color/white"
@@ -152,13 +161,16 @@
         android:layout_marginTop="20dp"
         android:padding="20dp"
         android:hint="Email address or Phone Number"
+        android:fontFamily="@font/roboto_regular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/login_continue_btn_id"
         android:padding="20dp"
         android:backgroundTint="#f0638a"
         android:text="Continue"
+        android:fontFamily="@font/roboto_regular"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"

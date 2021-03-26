@@ -12,6 +12,7 @@
         android:textSize="40sp"
         android:textColor="@color/white"
         android:text="Please wait for verification."
+        android:fontFamily="@font/roboto_regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>

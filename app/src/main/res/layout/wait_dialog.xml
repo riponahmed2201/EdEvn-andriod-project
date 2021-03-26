@@ -11,6 +11,7 @@
         android:layout_marginRight="30dp"
         android:textSize="40sp"
         android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
         android:text="Please wait, while we are building your class room."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
