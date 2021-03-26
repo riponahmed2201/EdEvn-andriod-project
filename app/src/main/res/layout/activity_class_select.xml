@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/edevn_bg"
+    android:background="@drawable/background_block"
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".ClassSelectActivity">
 
     <TextView
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="40dp"
         android:textSize="30sp"
         android:textColor="@color/white"
         android:text="Please select your class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
@@ -25,6 +26,8 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:id="@+id/class_six_id"
+            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -36,6 +39,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/class_seven_id"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
@@ -43,6 +47,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -54,6 +59,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/class_eight_id"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
@@ -61,6 +67,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -72,6 +79,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/class_nine_id"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
@@ -79,6 +87,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
@@ -90,6 +99,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/class_ten_id"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
@@ -97,6 +107,7 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView

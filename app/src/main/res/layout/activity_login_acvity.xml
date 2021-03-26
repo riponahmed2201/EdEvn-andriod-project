@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/edevn_bg"
+    android:background="@drawable/background_block"
     android:layout_height="match_parent"
     tools:context=".LoginAcvity">
 
@@ -29,16 +29,17 @@
 
         <ImageView
             android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@mipmap/ic_launcher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <View
-            android:background="#E91E63"
+            android:background="#3e5fa2"
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_marginLeft="10dp"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_gravity="center"
             android:text="join with facebook"
             android:textColor="@color/white"
@@ -58,16 +59,17 @@
 
         <ImageView
             android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@mipmap/ic_launcher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <View
-            android:background="#E91E63"
+            android:background="#e7e7e7"
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_marginLeft="10dp"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_gravity="center"
             android:text="join with google"
             android:textColor="@color/black"
@@ -86,17 +88,18 @@
         android:layout_height="60dp">
 
         <ImageView
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:background="@mipmap/ic_launcher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <View
-            android:background="#E91E63"
+            android:background="#e7e7e7"
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_marginLeft="10dp"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_gravity="center"
             android:text="join with apple"
             android:textColor="@color/black"

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.edevnlive"
+        applicationId "com.entertech.edevn"
         minSdkVersion 22
         targetSdkVersion 30
         versionCode 1
@@ -39,7 +39,4 @@ dependencies {
 
     //pinview library added for otp
     implementation 'com.chaos.view:pinview:1.4.4'
-
-    //cardview library added
-    implementation "androidx.cardview:cardview:1.2.0"
 }

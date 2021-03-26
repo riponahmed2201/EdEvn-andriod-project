@@ -1,8 +1,8 @@
-package com.example.edevnlive;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.entertech.edevn;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class VerificationActivity extends AppCompatActivity {
 

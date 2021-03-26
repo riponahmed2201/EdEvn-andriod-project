@@ -1,4 +1,4 @@
-package com.example.edevnlive;
+package com.entertech.edevn;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.edevnlive", appContext.getPackageName());
+        assertEquals("com.entertech.edevn", appContext.getPackageName());
     }
 }
