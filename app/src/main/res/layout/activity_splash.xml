@@ -10,8 +10,8 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:background="@drawable/main_logo"
-        android:layout_width="150dp"
+        android:background="@drawable/edevn_white_logo"
+        android:layout_width="119dp"
         android:layout_marginBottom="10dp"
         android:layout_height="150dp"/>
 <!--    <TextView-->
