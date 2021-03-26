@@ -28,11 +28,13 @@
         android:layout_height="60dp">
 
         <ImageView
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/facebook"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
         <View
             android:background="#3e5fa2"
             android:layout_width="1dp"
@@ -58,11 +60,12 @@
         android:layout_height="60dp">
 
         <ImageView
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/google"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
         <View
             android:background="#e7e7e7"
             android:layout_width="1dp"
@@ -90,9 +93,10 @@
         <ImageView
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:background="@mipmap/ic_launcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginTop="10dp"
+            android:background="@drawable/apple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
         <View
             android:background="#e7e7e7"
             android:layout_width="1dp"
