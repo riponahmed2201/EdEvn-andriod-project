@@ -39,4 +39,7 @@ dependencies {
 
     //pinview library added for otp
     implementation 'com.chaos.view:pinview:1.4.4'
+
+    //card view library
+    implementation "androidx.cardview:cardview:1.0.0"
 }

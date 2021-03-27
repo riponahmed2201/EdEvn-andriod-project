@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EdevnLive</string>
+    <string name="app_name">EdEvn</string>
     <string name="login_text">Please join <b>EDEVN</b> to start learning. </string>
     <string name="welcome_screen_long_text">
        What is edevn in 2 line. Lorem ipsum is simply dummy text of the printing and typesetting industry.
@@ -16,4 +16,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
