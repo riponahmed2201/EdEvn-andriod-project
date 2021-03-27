@@ -19,7 +19,7 @@ public class WaitClassActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(WaitClassActivity.this, LoginAcvity.class);
+                    Intent intent = new Intent(WaitClassActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {
