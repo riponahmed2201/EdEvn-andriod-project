@@ -26,20 +26,240 @@
 
         </com.google.android.material.navigation.NavigationView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_height="wrap_content">
 
-            <TextView
-                android:textAppearance="?android:textAppearanceLarge"
-                android:text="Inside the Profile Activity"
-                android:layout_width="wrap_content"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content"/>
+        <ScrollView
+            android:background="#ebeef7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-        </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+               <!--first subject list-->
+               <LinearLayout
+
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="30dp"
+                   android:weightSum="3"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+
+                   <LinearLayout
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@drawable/mathematics"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Mathematics"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@drawable/english"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="English"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Science"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+               <!--second subject list-->
+
+               <LinearLayout
+                   android:layout_marginStart="10dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="30dp"
+                   android:weightSum="3"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Bangla"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Commerce"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="ICT"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+               <!--third subject list-->
+
+               <LinearLayout
+                   android:layout_marginStart="10dp"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="30dp"
+                   android:weightSum="3"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Bangla"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="Commerce"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginLeft="50dp"
+                       android:layout_weight="1"
+                       android:orientation="vertical"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:src="@mipmap/ic_launcher"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           android:text="ICT"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"/>
+                   </LinearLayout>
+
+
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+
+        </ScrollView>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

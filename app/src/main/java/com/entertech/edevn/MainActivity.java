@@ -8,13 +8,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.GridView;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
@@ -51,12 +56,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.homeMenuId)
         {
-            intent = new Intent(this, HomeActivity.class);
+            intent = new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
         }
        else if (item.getItemId() == R.id.profileMenuId)
         {
-            intent = new Intent(this, ProfileActivity.class);
+            intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
         }
         return false;
