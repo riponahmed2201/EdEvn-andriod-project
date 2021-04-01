@@ -10,72 +10,80 @@
     tools:context=".ClassSelectActivity">
 
     <TextView
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="241dp"
         android:layout_marginLeft="40dp"
-        android:textSize="30sp"
-        android:textColor="@color/white"
+        android:layout_marginRight="40dp"
+        android:textSize="24sp"
+        android:lineHeight="32sp"
+        android:textStyle="normal"
+        android:textColor="#FFFFFF"
         android:text="Please select your class"
         android:fontFamily="@font/roboto_regular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="280dp"
+        android:layout_height="64dp"/>
 
     <LinearLayout
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="26.95dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/class_six_id"
-            android:buttonTint="@color/white"
+            android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
-            android:textSize="20sp"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
+            android:layout_width="8dp"
             android:text="6"
-            android:layout_height="wrap_content"/>
+            android:layout_height="17dp"/>
     </LinearLayout>
 
     <LinearLayout
 
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/class_seven_id"
-            android:buttonTint="@color/white"
+            android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:textSize="20sp"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
+            android:layout_width="8dp"
             android:text="7"
-            android:layout_height="wrap_content"/>
+            android:layout_height="17dp"/>
     </LinearLayout>
 
     <LinearLayout
 
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/class_eight_id"
-            android:buttonTint="@color/white"
+            android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
-            android:textSize="20sp"
-            android:textColor="@color/white"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
+            android:textColor="#EEEEEE"
             android:layout_width="wrap_content"
             android:text="8"
             android:layout_height="wrap_content"/>
@@ -84,19 +92,20 @@
     <LinearLayout
 
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/class_nine_id"
-            android:buttonTint="@color/white"
+            android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:textSize="20sp"
-            android:textColor="@color/white"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
+            android:textColor="#EEEEEE"
             android:layout_width="wrap_content"
             android:text="9"
             android:layout_height="wrap_content"/>
@@ -105,22 +114,36 @@
     <LinearLayout
 
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/class_ten_id"
-            android:buttonTint="@color/white"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:buttonTint="#EEEEEE" />
+
         <TextView
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
+            android:textColor="#EEEEEE"
+            android:layout_width="16dp"
             android:text="10"
-            android:layout_height="wrap_content"/>
+            android:layout_height="17dp"/>
     </LinearLayout>
 
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+     <Button
+         android:layout_alignParentBottom="true"
+         android:textAllCaps="true"
+         android:text="Start Learning"
+         android:background="@drawable/login_continue_buttion"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+ </RelativeLayout>
 </LinearLayout>
