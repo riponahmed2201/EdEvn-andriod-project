@@ -4,14 +4,282 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@drawable/background_block"
+    android:background="#e6e9f7"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
-    <TextView
-        android:textAppearance="?android:textAppearanceLarge"
-        android:text="Inside the Home Activity"
-        android:layout_width="wrap_content"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#e6e9f7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/home_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/home_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/math_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Mathematics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/english_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="English"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/science_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="Science"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FFC035"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#1CD09C"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#53A9FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

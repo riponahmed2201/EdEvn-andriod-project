@@ -155,6 +155,7 @@
     </LinearLayout>
 
     <EditText
+        android:textSize="14sp"
         android:id="@+id/login_email_or_phone_number_id"
         android:background="@drawable/edit_text_border"
         android:gravity="center"
