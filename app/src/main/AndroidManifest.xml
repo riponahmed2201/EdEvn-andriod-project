@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EDEVN">
-        <activity android:name=".OTPVerificationActivity"></activity>
+        <activity android:name=".ClassSelectedActivity"></activity>
+        <activity android:name=".OTPVerificationActivity" />
         <activity
             android:name=".LoaderVerificationActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -20,7 +21,7 @@
             android:name=".HomeActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".WaitClassActivity"
+            android:name=".LoaderClassRoomActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".WelcomeActivity"

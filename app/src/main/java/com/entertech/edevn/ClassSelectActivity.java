@@ -3,6 +3,7 @@ package com.entertech.edevn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -43,36 +44,30 @@ public class ClassSelectActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
 
-//        switch (v.getId()){
-//            case R.id.class_six_id:
-//                Toast.makeText(this, "You clicked class six", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
-//                startActivity(intent);
-//        }
 
         if (v.getId() == R.id.class_six_id){
             Toast.makeText(this, "You clicked class six", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
+            Intent intent = new Intent(ClassSelectActivity.this, ClassSelectedActivity.class);
             startActivity(intent);
         }
         else if(v.getId() == R.id.class_seven_id){
             Toast.makeText(this, "You clicked class seven", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
+            Intent intent = new Intent(ClassSelectActivity.this, ClassSelectedActivity.class);
             startActivity(intent);
         }
         else if(v.getId() == R.id.class_eight_id){
             Toast.makeText(this, "You clicked Class eight", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
+            Intent intent = new Intent(ClassSelectActivity.this, ClassSelectedActivity.class);
             startActivity(intent);
         }
         else if(v.getId() == R.id.class_nine_id){
             Toast.makeText(this, "You clicked Class nine", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
+            Intent intent = new Intent(ClassSelectActivity.this, ClassSelectedActivity.class);
             startActivity(intent);
         }
         else if(v.getId() == R.id.class_ten_id){
             Toast.makeText(this, "You clicked Class ten", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ClassSelectActivity.this, WaitClassActivity.class);
+            Intent intent = new Intent(ClassSelectActivity.this, ClassSelectedActivity.class);
             startActivity(intent);
         }
         else{
