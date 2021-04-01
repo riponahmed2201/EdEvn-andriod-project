@@ -63,7 +63,7 @@
 
                        <ImageView
                            android:layout_gravity="center"
-                           android:src="@drawable/mathematics"
+                           android:src="@drawable/test"
                            android:layout_width="80dp"
                            android:layout_height="80dp"/>
                        <TextView
@@ -82,9 +82,9 @@
 
                        <ImageView
                            android:layout_gravity="center"
-                           android:src="@drawable/english"
-                           android:layout_width="80dp"
-                           android:layout_height="80dp"/>
+                           android:src="@drawable/test"
+                           android:layout_width="6dp"
+                           android:layout_height="6dp"/>
                        <TextView
                            android:layout_gravity="center"
                            android:text="English"
@@ -117,7 +117,7 @@
                <!--second subject list-->
 
                <LinearLayout
-                   android:layout_marginStart="10dp"
+
                    android:layout_gravity="center_horizontal"
                    android:layout_marginTop="30dp"
                    android:weightSum="3"
@@ -200,7 +200,6 @@
 
 
                    <LinearLayout
-                       android:layout_marginTop="20dp"
                        android:layout_weight="1"
                        android:orientation="vertical"
                        android:layout_width="wrap_content"
@@ -262,14 +261,20 @@
 
            <LinearLayout
                android:layout_marginTop="20dp"
-               android:background="#5a59dc"
-               android:layout_width="wrap_content"
+               android:background="#f2f5f9"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content">
-               <TextView
-                   android:text="Live Classes"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"/>
+
+               <LinearLayout
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginRight="20dp"
+                   android:background="#8180f1"
+                   android:layout_width="match_parent"
+                   android:layout_height="100dp">
+
+               </LinearLayout>
            </LinearLayout>
+
        </LinearLayout>
 
         </ScrollView>

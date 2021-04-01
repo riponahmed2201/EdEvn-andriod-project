@@ -10,32 +10,33 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:textSize="30sp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:textSize="24sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:textColor="@color/white"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/login_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="280dp"
+        android:layout_height="64dp"/>
 
     <LinearLayout
         android:id="@+id/login_with_facebook_id"
-        android:background="#4267b2"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:backgroundTint="#4267b2"
+        android:background="@drawable/login_continue_buttion"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_width="280dp"
+        android:layout_height="40dp">
 
         <ImageView
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
             android:background="@drawable/facebook"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_width="11dp"
+            android:layout_height="20dp"/>
 
         <View
             android:background="#3e5fa2"
@@ -44,39 +45,40 @@
         <TextView
             android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:layout_gravity="center"
             android:text="join with facebook"
             android:textColor="@color/white"
             android:textAllCaps="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="159dp"
+            android:layout_height="21dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/login_with_google_id"
-        android:background="#ffffff"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/login_continue_buttion"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_width="280dp"
+        android:layout_height="40dp">
 
         <ImageView
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:background="@drawable/google"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
         <View
             android:background="#e7e7e7"
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:layout_gravity="center"
             android:text="join with google"
             android:fontFamily="@font/roboto_regular"
@@ -88,28 +90,29 @@
 
     <LinearLayout
         android:id="@+id/login_with_apple_id"
-        android:background="#ffffff"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/login_continue_buttion"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_width="280dp"
+        android:layout_height="40dp">
 
         <ImageView
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:background="@drawable/apple"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
         <View
             android:background="#e7e7e7"
             android:layout_width="1dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:layout_gravity="center"
             android:text="join with apple"
             android:fontFamily="@font/roboto_regular"
@@ -123,11 +126,11 @@
         android:gravity="center"
         android:weightSum="7"
         android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="280dp"
+        android:layout_height="40dp">
         <View
             android:background="@color/white"
             android:layout_weight="3"
@@ -137,7 +140,7 @@
         <TextView
             android:gravity="center"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textColor="@color/white"
             android:text="or"
             android:fontFamily="@font/roboto_regular"
@@ -155,26 +158,27 @@
         android:id="@+id/login_email_or_phone_number_id"
         android:background="@drawable/edit_text_border"
         android:gravity="center"
-        android:textColorHint="@color/white"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:padding="20dp"
+        android:textColorHint="#E5E5E5"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
         android:hint="Email address or Phone Number"
         android:fontFamily="@font/roboto_regular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_width="280dp"
+        android:layout_height="48dp"/>
     <Button
+        android:textAlignment="center"
         android:id="@+id/login_continue_btn_id"
-        android:padding="20dp"
-        android:backgroundTint="#f0638a"
+        android:background="@drawable/login_continue_buttion"
         android:text="Continue"
+        android:textSize="14sp"
+        android:textAllCaps="true"
         android:fontFamily="@font/roboto_regular"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="280dp"
+        android:layout_height="41dp"/>
+
 
 </LinearLayout>
