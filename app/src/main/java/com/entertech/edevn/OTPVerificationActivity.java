@@ -28,5 +28,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
                 }
             }
         });
+
+        thread.start();
     }
 }
