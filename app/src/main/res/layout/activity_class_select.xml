@@ -139,11 +139,19 @@
      android:layout_height="match_parent">
 
      <Button
+         android:id="@+id/class_select_buttion_id"
          android:layout_alignParentBottom="true"
          android:textAllCaps="true"
+         android:textFontWeight="600"
+         android:textStyle="normal"
+         android:textSize="14sp"
+         android:lineHeight="21sp"
+         android:textColor="#FFFFFF"
+         android:letterSpacing="0.0357143"
          android:text="Start Learning"
          android:background="@drawable/login_continue_buttion"
          android:layout_width="match_parent"
-         android:layout_height="wrap_content"/>
+         android:layout_height="56dp"/>
  </RelativeLayout>
+
 </LinearLayout>
