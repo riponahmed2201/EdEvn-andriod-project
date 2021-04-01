@@ -2,17 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:gravity="center"
-    android:background="@drawable/background_block"
+    android:background="#5b5add"
     android:layout_height="match_parent">
-
     <TextView
-        android:textAlignment="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:textSize="40sp"
+        android:id="@+id/join_loader_verification"
+        android:lineHeight="32sp"
+        android:textStyle="normal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="24sp"
         android:textColor="@color/white"
         android:text="Please wait for verification."
         android:fontFamily="@font/roboto_regular"
+        android:layout_width="280dp"
+        android:layout_height="64dp"/>
+
+    <ProgressBar
+        android:layout_marginTop="20dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="50dp"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/white"/>
+
+
 </LinearLayout>

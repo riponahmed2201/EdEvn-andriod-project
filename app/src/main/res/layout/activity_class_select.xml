@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_block"
+    android:background="#5b5add"
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".ClassSelectActivity">
