@@ -18,7 +18,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(4000);
+                    sleep(9000);
                     Intent intent = new Intent(OTPVerificationActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();

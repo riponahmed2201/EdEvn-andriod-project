@@ -10,6 +10,8 @@
     tools:context=".VerificationActivity">
 
     <TextView
+        android:cursorVisible="true"
+        android:inputType="number"
         android:textStyle="normal"
         android:lineHeight="30sp"
         android:layout_marginLeft="36dp"
@@ -49,19 +51,11 @@
         android:textSize="14sp"
         android:textStyle="normal" />
 
-<!--    <TextView-->
-<!--        android:layout_width="280dp"-->
-<!--        android:layout_height="20dp"-->
-<!--        android:layout_marginStart="36dp"-->
-<!--        android:layout_marginEnd="44dp"-->
-<!--        android:fontFamily="@font/roboto_regular"-->
-<!--        android:lineHeight="20dp"-->
-<!--        android:text="Enter the 6 digit code"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="14sp"-->
-<!--        android:textStyle="normal" />-->
-
     <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:cursorVisible="true"
+        app:hideLineWhenFilled="true"
         android:inputType="number"
         app:itemSpacing="9dp"
         android:layout_marginStart="36dp"
@@ -74,8 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:textColor="@color/white"
+        app:viewType="rectangle"
         >
-
     </com.chaos.view.PinView>
 
 

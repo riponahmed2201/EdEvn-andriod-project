@@ -149,6 +149,7 @@
             android:textColor="#FFFFFF"
             android:letterSpacing="0.0357143"
             android:text="Start Learning"
+            android:fontFamily="@font/roboto_regular"
             android:background="@drawable/login_continue_buttion"
             android:layout_width="match_parent"
             android:layout_height="56dp"/>

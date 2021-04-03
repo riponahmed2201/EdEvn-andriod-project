@@ -62,6 +62,11 @@
     <!--        android:textStyle="normal" />-->
 
     <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:cursorVisible="true"
+        app:hideLineWhenFilled="true"
+        android:inputType="number"
         app:itemSpacing="9dp"
         android:layout_marginStart="36dp"
         android:layout_marginEnd="44dp"
@@ -73,9 +78,34 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:textColor="@color/white"
+        app:viewType="rectangle"
         >
-
     </com.chaos.view.PinView>
+
+<!--    <com.chaos.view.PinView-->
+<!--        android:id="@+id/pin_view"-->
+<!--        style="@style/PinWidget.PinView"-->
+<!--        android:layout_marginStart="36dp"-->
+<!--        android:layout_marginEnd="44dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:cursorVisible="true"-->
+<!--        android:inputType="number"-->
+<!--        android:itemBackground="#65EAEAEA"-->
+<!--        app:cursorColor="@color/black"-->
+<!--        app:hideLineWhenFilled="true"-->
+<!--        app:cursorWidth="2dp"-->
+<!--        app:itemCount="6"-->
+<!--        app:itemWidth="38dp"-->
+<!--        app:itemHeight="48dp"-->
+<!--        app:itemRadius="4dp"-->
+<!--        app:lineColor="#1A67C4"-->
+<!--        app:lineWidth="1dp"-->
+<!--        app:viewType="rectangle"-->
+<!--        app:itemSpacing="9dp">-->
+
+<!--    </com.chaos.view.PinView>-->
 
 
     <TextView
