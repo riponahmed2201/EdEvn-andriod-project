@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="14dp"
             android:textSize="14sp"
             android:textColor="@color/white"
@@ -57,7 +58,9 @@
             android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
+            android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="14dp"
             android:textSize="14sp"
             android:textColor="@color/white"
@@ -81,7 +84,8 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:layout_marginLeft="14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginStart="14dp"
             android:textSize="14sp"
             android:textColor="#EEEEEE"
             android:layout_width="wrap_content"
@@ -91,7 +95,7 @@
 
     <LinearLayout
 
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -102,8 +106,10 @@
             android:buttonTint="#EEEEEE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <TextView
-            android:layout_marginLeft="14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginStart="14dp"
             android:textSize="14sp"
             android:textColor="#EEEEEE"
             android:layout_width="wrap_content"
@@ -113,7 +119,7 @@
 
     <LinearLayout
 
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="23dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -126,7 +132,8 @@
             android:buttonTint="#EEEEEE" />
 
         <TextView
-            android:layout_marginLeft="14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginStart="14dp"
             android:textSize="14sp"
             android:textColor="#EEEEEE"
             android:layout_width="16dp"
