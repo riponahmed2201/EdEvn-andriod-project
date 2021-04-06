@@ -168,6 +168,7 @@
         android:layout_width="280dp"
         android:layout_height="48dp"/>
     <Button
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:id="@+id/login_continue_btn_id"
         android:background="@drawable/login_continue_buttion"

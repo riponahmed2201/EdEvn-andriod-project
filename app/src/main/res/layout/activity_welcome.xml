@@ -28,6 +28,7 @@
         android:text="@string/welcome_screen_long_text"
         android:layout_height="60dp"/>
     <Button
+        android:textColor="@color/white"
         android:id="@+id/welcome_continue_button"
         android:background="@drawable/login_continue_buttion"
         android:textAlignment="center"

@@ -10,8 +10,6 @@
     tools:context=".VerificationActivity">
 
     <TextView
-        android:cursorVisible="true"
-        android:inputType="number"
         android:textStyle="normal"
         android:lineHeight="30sp"
         android:layout_marginLeft="36dp"

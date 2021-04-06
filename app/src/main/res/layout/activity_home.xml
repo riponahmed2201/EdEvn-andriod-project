@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#f2f5f9"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:background="#DCDADA"
-        android:layout_height="50dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
+        android:background="#e6e9f7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
 
         <ImageView
             android:layout_marginStart="16dp"
@@ -30,262 +27,547 @@
             android:src="@drawable/home_menu_title"
             android:layout_width="88dp"
             android:layout_height="43dp"/>
-
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-16dp">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <FrameLayout
-                android:id="@+id/frameLayout"
+            
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="390dp"
-                android:background="#f2f5f9"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
+                
                 <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="vertical"
-
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
                     android:weightSum="3"
-                    app:layout_constraintTop_toTopOf="parent">
-
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:orientation="vertical"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/math_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/math_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Mathematics" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/english_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="English" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/science_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Science" />
-
-                        </LinearLayout>
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Mathematics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:orientation="vertical"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/english_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/bangla_icon" />
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="English"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Bangla" />
+                    </LinearLayout>
 
-                        </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/commerce_icon" />
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/science_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Commerc" />
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="Science"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
-                        </LinearLayout>
+                    </LinearLayout>
+                    
+                </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/technology_icon" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="ICT" />
-
-                        </LinearLayout>
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FFC035"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:orientation="vertical"
                         android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/bangla_icon" />
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#1CD09C"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Bangla" />
+                    </LinearLayout>
 
-                        </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/commerce_icon" />
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Commerc" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/technology_icon" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="ICT" />
-
-                        </LinearLayout>
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#53A9FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
 
                     </LinearLayout>
 
                 </LinearLayout>
-            </FrameLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:cardElevation="20dp"
-                app:cardCornerRadius="90dp"
-                android:background="@drawable/bgcircle"
-                app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-                >
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/chevrons_down">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
 
-                </ImageView>
-            </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f2f5f9"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="15dp"
+                    app:cardBackgroundColor="#8483f3"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Live Classes"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Online tutions by the best teachers live doubt solving and one-to-one solution"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_marginBottom="8dp"
+                            android:layout_width="153dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Book a free class"
+                            android:textColor="@color/white"
+                            android:textFontWeight="500"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/live_class_home_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="327dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineHeight="16dp"
+                    android:text="Resume Your Study"
+                    android:textAllCaps="true"
+                    android:textColor="#212121"
+                    android:textFontWeight="600"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedScrolling">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:layout_width="216dp"
+                                    android:layout_height="121dp"
+                                    android:src="@drawable/math_image" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="16.5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:lineHeight="16dp"
+                                    android:text="Mathematics"
+                                    android:textAllCaps="true"
+                                    android:textColor="#53A9FF"
+                                    android:textFontWeight="600"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Understanding Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="20sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="108dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="2 of 8 Lessons"
+                                    android:textColor="#212121"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:layout_width="216dp"
+                                    android:layout_height="121dp"
+                                    android:src="@drawable/science_image" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="16.5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:lineHeight="16dp"
+                                    android:text="Science"
+                                    android:textAllCaps="true"
+                                    android:textColor="#8883FF"
+                                    android:textFontWeight="600"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="The Scientific Method"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="20sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="108dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="4 of 8 Lessons"
+                                    android:textColor="#212121"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:layout_width="216dp"
+                                    android:layout_height="121dp"
+                                    android:src="@drawable/business_image" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="16.5dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:lineHeight="16dp"
+                                    android:text="Business"
+                                    android:textAllCaps="true"
+                                    android:textColor="#66d09d"
+                                    android:textFontWeight="600"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="183dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Business, Trade and Commerce"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="20sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="108dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="6 of 8 Lessons"
+                                    android:textColor="#212121"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="327dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineHeight="16dp"
+                    android:text="Top Picks"
+                    android:textAllCaps="true"
+                    android:textColor="#212121"
+                    android:textFontWeight="600"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
