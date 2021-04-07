@@ -9,13 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private Button welcomeContinueButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        welcomeContinueButton = (Button) findViewById(R.id.welcome_continue_button);
+        Button welcomeContinueButton = findViewById(R.id.welcome_continue_button);
 
         welcomeContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override

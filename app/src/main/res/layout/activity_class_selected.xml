@@ -136,7 +136,7 @@
             android:layout_marginStart="14dp"
             android:textSize="14sp"
             android:textColor="#EEEEEE"
-            android:layout_width="16dp"
+            android:layout_width="wrap_content"
             android:text="10"
             android:layout_height="17dp"/>
     </LinearLayout>
@@ -157,7 +157,7 @@
             android:letterSpacing="0.0357143"
             android:text="Start Learning"
             android:fontFamily="@font/roboto_regular"
-            android:background="@drawable/login_continue_buttion"
+            android:background="@drawable/login_continue_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"/>
     </RelativeLayout>

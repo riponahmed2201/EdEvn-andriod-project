@@ -22,7 +22,7 @@
     <LinearLayout
         android:id="@+id/login_with_facebook_id"
         android:backgroundTint="#4267b2"
-        android:background="@drawable/login_continue_buttion"
+        android:background="@drawable/login_continue_button"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
     <LinearLayout
         android:id="@+id/login_with_google_id"
         android:backgroundTint="#ffffff"
-        android:background="@drawable/login_continue_buttion"
+        android:background="@drawable/login_continue_button"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="12dp"
@@ -91,7 +91,7 @@
     <LinearLayout
         android:id="@+id/login_with_apple_id"
         android:backgroundTint="#ffffff"
-        android:background="@drawable/login_continue_buttion"
+        android:background="@drawable/login_continue_button"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="12dp"
@@ -171,7 +171,7 @@
         android:textColor="@color/white"
         android:textAlignment="center"
         android:id="@+id/login_continue_btn_id"
-        android:background="@drawable/login_continue_buttion"
+        android:background="@drawable/login_continue_button"
         android:text="Continue"
         android:textSize="14sp"
         android:textAllCaps="true"

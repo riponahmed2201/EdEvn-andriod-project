@@ -27,10 +27,11 @@
         android:fontFamily="@font/roboto_regular"
         android:text="@string/welcome_screen_long_text"
         android:layout_height="60dp"/>
+
     <Button
-        android:textColor="@color/white"
         android:id="@+id/welcome_continue_button"
-        android:background="@drawable/login_continue_buttion"
+        android:textColor="@color/white"
+        android:background="@drawable/login_continue_button"
         android:textAlignment="center"
         android:layout_marginTop="10dp"
         android:text="Continue"
