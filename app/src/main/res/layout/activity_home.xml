@@ -317,7 +317,7 @@
                         <TextView
                             android:layout_width="190dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="9dp"
                             android:fontFamily="@font/poppins_regular"
                             android:text="Online tutions by the best teachers live doubt solving and one-to-one solution"
@@ -327,7 +327,7 @@
                         <TextView
                             android:layout_width="167dp"
                             android:layout_height="36dp"
-                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
                             android:layout_marginTop="14dp"
                             android:layout_marginBottom="8dp"
                             android:fontFamily="@font/roboto_regular"
@@ -349,7 +349,7 @@
                 <TextView
                     android:layout_width="327dp"
                     android:layout_height="16dp"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/poppins_regular"
                     android:lineHeight="16dp"
