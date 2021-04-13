@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">EdEvn</string>
     <string name="login_text">Please join <b>EDEVN</b> to start learning. </string>
+    <string name="live_class_free_class_description_text">
+        Online tutions by the best teachers live doubt solving and one-to-one solution.
+        Limited seats so book now before we are fully booked
+    </string>
     <string name="welcome_screen_long_text">
        What is edevn in 2 line. Lorem ipsum is simply dummy text of the printing and typesetting industry.
     </string>

@@ -9,19 +9,17 @@
         android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EDEVN">
-
-        <activity android:name=".ClassSelectedActivity"/>
-        <activity android:name=".OTPVerificationActivity"/>
-        <activity android:name=".LoaderVerificationActivity"/>
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".LoaderClassRoomActivity"/>
-        <activity android:name=".WelcomeActivity"/>
-        <activity android:name=".VerificationActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".ClassSelectActivity"/>
-
-        <activity
-            android:name=".SplashActivity">
+        <activity android:name=".LiveClassActivity"></activity>
+        <activity android:name=".ClassSelectedActivity" />
+        <activity android:name=".OTPVerificationActivity" />
+        <activity android:name=".LoaderVerificationActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".LoaderClassRoomActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".VerificationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ClassSelectActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
