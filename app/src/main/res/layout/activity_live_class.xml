@@ -15,6 +15,7 @@
         android:layout_height="60dp">
 
         <ImageView
+            android:id="@+id/live_class_back_Id"
             android:layout_marginStart="16dp"
             android:layout_gravity="center"
             android:src="@drawable/live_class_menu_icon"
@@ -33,7 +34,6 @@
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:textFontWeight="500"
-            android:letterSpacing="0.15dp"
             android:lineHeight="24dp"
             android:textSize="20sp"
             android:fontFamily="@font/roboto_regular"
@@ -218,7 +218,6 @@
 
                         <TextView
                             android:layout_marginBottom="8dp"
-                            android:letterSpacing="1.25dp"
                             android:fontFamily="@font/poppins_regular"
                             android:textFontWeight="600"
                             android:textColor="#6C6BE1"
@@ -368,7 +367,6 @@
 
                         <TextView
                             android:layout_marginBottom="8dp"
-                            android:letterSpacing="1.25dp"
                             android:fontFamily="@font/poppins_regular"
                             android:textFontWeight="600"
                             android:textColor="#6C6BE1"
@@ -396,6 +394,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:layout_marginBottom="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="193dp"
                 android:layout_marginLeft="15dp"
@@ -518,7 +517,6 @@
 
                         <TextView
                             android:layout_marginBottom="8dp"
-                            android:letterSpacing="1.25dp"
                             android:fontFamily="@font/poppins_regular"
                             android:textFontWeight="600"
                             android:textColor="#6C6BE1"
