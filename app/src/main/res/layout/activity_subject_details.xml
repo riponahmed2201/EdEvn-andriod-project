@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f5f9"
     tools:context=".SubjectDetailsActivity">
 
     <ScrollView
@@ -11,6 +12,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -91,7 +93,498 @@
                     android:layout_height="wrap_content"/>
             </LinearLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/subject_details_circle_shape"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"/>
+
+                            <TextView
+                                android:layout_marginTop="26dp"
+                                android:textFontWeight="500"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="#53A9FF"
+                                android:textSize="16sp"
+                                android:layout_marginStart="16dp"
+                                android:text="Introduction to Matmatics"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#53A9FF"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/subject_details_check_icon"
+                                android:layout_width="12dp"
+                                android:layout_height="9dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Interesting Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="It is not just numbers"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#53A9FF"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Representing Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="what it really means?"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#e0e0e0"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Fun with Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="how to enjoy numbers"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#e0e0e0"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Quiz"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="test your knowledge"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="16dp"
+                        android:background="#ebebeb"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:layout_marginBottom="18dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textFontWeight="600"
+                            android:textColor="#53A9FF"
+                            android:textSize="14sp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginStart="15dp"
+                            android:textAllCaps="true"
+                            android:text="Continue Learning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginBottom="46dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/subject_details_circle_shape"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"/>
+
+                            <TextView
+                                android:layout_marginTop="26dp"
+                                android:textFontWeight="500"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="#53A9FF"
+                                android:textSize="16sp"
+                                android:layout_marginStart="16dp"
+                                android:text="Playing with Numbers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#53A9FF"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/subject_details_check_icon"
+                                android:layout_width="12dp"
+                                android:layout_height="9dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Adding Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="2 + 2 = ?"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#e0e0e0"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Subtracting Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="5 - 2 = ?"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#e0e0e0"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Multiplying Numbers"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="4 X 3 = ?"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="24dp"
+                                android:backgroundTint="#e0e0e0"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/live_class_circle"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"/>
+
+                            <LinearLayout
+                                android:layout_marginBottom="24dp"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Quiz"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="23dp"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="test your knowledge"
+                                    android:textColor="#b4b4b4"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
