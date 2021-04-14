@@ -776,55 +776,85 @@
 
                 </HorizontalScrollView>
 
-
                 <androidx.cardview.widget.CardView
-                    android:layout_marginBottom="67dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginRight="16dp"
-                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="67dp"
+                    app:cardBackgroundColor="#ffffff"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="5dp">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="4dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/quize_icon" />
+                    app:cardElevation="8dp">
 
                     <LinearLayout
-                        android:id="@+id/quize_text_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Test your knowledge"
-                            android:textColor="#acacef"
-                            android:textFontWeight="600"
-                            android:textSize="10sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="200dp"
-                            android:layout_height="36dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="14dp"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Challenege others in a quizz."
-                            android:textColor="#212121"
-                            android:textFontWeight="500"
-                            android:textSize="14sp" />
+                            <ImageView
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/math_icon"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"/>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textSize="10sp"
+                                    android:textFontWeight="600"
+                                    android:textColor="#6C6BE1"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Test Your Khnowledge"
+                                    android:textAllCaps="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textFontWeight="500"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="#212121"
+                                    android:textSize="20sp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginStart="16dp"
+                                    android:text="Challenege others in a quizz."
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:drawableRight="@drawable/start_quize_icon_arrow"
+                                android:paddingRight="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/start_quize_bow_btn"
+                                android:textAlignment="center"
+                                android:text="Start Now"
+                                android:textColor="#FFFFFF"
+                                android:textAllCaps="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 

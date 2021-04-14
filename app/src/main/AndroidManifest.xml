@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EDEVN">
-        <activity android:name=".LiveClassActivity"></activity>
+        <activity android:name=".SubjectDetailsActivity"></activity>
+        <activity android:name=".LiveClassActivity" />
         <activity android:name=".ClassSelectedActivity" />
         <activity android:name=".OTPVerificationActivity" />
         <activity android:name=".LoaderVerificationActivity" />
