@@ -32,7 +32,7 @@
 
                     <ImageView
                         android:layout_marginTop="10dp"
-                        android:id="@+id/live_class_back_Id"
+                        android:id="@+id/subject_details_back_Id"
                         android:layout_marginStart="16dp"
                         android:src="@drawable/live_class_menu_icon"
                         android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
                 android:layout_marginRight="15dp"
                 app:cardBackgroundColor="#ffffff"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="8dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -361,7 +361,7 @@
                 android:layout_marginRight="15dp"
                 app:cardBackgroundColor="#ffffff"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="8dp">
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:orientation="vertical"
