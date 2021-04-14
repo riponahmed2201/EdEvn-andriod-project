@@ -53,6 +53,7 @@
                     android:layout_height="0dp">
                     
                     <LinearLayout
+                        android:id="@+id/home_math_sub_Id"
                         android:orientation="vertical"
                         android:layout_weight="1"
                         android:layout_width="0dp"
