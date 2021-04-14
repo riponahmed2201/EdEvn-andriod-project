@@ -127,7 +127,7 @@
                                 android:layout_height="36dp"/>
 
                             <TextView
-                                android:layout_marginTop="26dp"
+                                android:layout_marginTop="22dp"
                                 android:textFontWeight="500"
                                 android:fontFamily="@font/poppins_regular"
                                 android:textColor="#53A9FF"
@@ -387,7 +387,7 @@
                                 android:layout_height="36dp"/>
 
                             <TextView
-                                android:layout_marginTop="26dp"
+                                android:layout_marginTop="22dp"
                                 android:textFontWeight="500"
                                 android:fontFamily="@font/poppins_regular"
                                 android:textColor="#53A9FF"
