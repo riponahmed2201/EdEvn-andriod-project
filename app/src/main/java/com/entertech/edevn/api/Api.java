@@ -1,4 +1,6 @@
-package com.entertech.edevn.auth;
+package com.entertech.edevn.api;
+
+import com.entertech.edevn.auth.SignUp;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

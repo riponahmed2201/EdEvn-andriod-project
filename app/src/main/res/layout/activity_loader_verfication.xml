@@ -21,7 +21,7 @@
         android:layout_height="64dp"/>
 
     <ProgressBar
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"

@@ -7,10 +7,11 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.entertech.edevn.auth.Api;
+import com.entertech.edevn.api.Api;
 import com.entertech.edevn.auth.SignUp;
 
 import retrofit2.Call;
@@ -74,25 +75,30 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<SignUp> call, Response<SignUp> response) {
                 if (!response.isSuccessful()){
-//                    textViewResult.setText("Code:"+ response.code());
-                    ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-                    progressDialog.setCancelable(false);
-                    progressDialog.setIndeterminate(false);
-                    progressDialog.setTitle("Create an account.");
-                    progressDialog.show();
-
-                    Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-                    startActivity(intent);
+                   // textViewResult.setText("Code:"+ response.code());
+                    Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_SHORT).show();
                 }
+
+                SignUp signUpResponse = response.body();
+
+//                ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+//                progressDialog.setCancelable(false);
+//                progressDialog.setIndeterminate(false);
+//                progressDialog.setTitle("Create an account.");
+//                progressDialog.show();
+
+                Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+
+                String getEmailAfterSignUp = signUpResponse.getEmail();
+
+                Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
+                intent.putExtra("email",getEmailAfterSignUp);
+                startActivity(intent);
             }
 
             @Override
             public void onFailure(Call<SignUp> call, Throwable t) {
-                ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-                progressDialog.setCancelable(false);
-                progressDialog.setIndeterminate(false);
-                progressDialog.setTitle("Account created failed.");
-                progressDialog.show();
+                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
