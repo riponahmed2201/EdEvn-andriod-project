@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void createUser()
     {
-        SignUp signUp = new SignUp("admin12345@gmail.com");
+        SignUp signUp = new SignUp(emailOrPhone);
 //        Call<SignUp> call = retrofitClientApi.createUser("admin@gmail.com");
         Call<SignUp> call = api.createUser(signUp);
 
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                 ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
                 progressDialog.setCancelable(false);
                 progressDialog.setIndeterminate(false);
-                progressDialog.setTitle(t.getMessage());
+                progressDialog.setTitle("Account created failed.");
                 progressDialog.show();
             }
         });
