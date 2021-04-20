@@ -24,6 +24,20 @@ public class LoginActivity extends AppCompatActivity {
         loginContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
+                if (emailOrPhone.isEmpty()){
+                    editTextEmailOrPhoneNumber.setError("Email is required.");
+                    editTextEmailOrPhoneNumber.requestFocus();
+                    return;
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()){
+                    editTextEmailOrPhoneNumber.setError("Please enter a valid email.");
+                    editTextEmailOrPhoneNumber.requestFocus();
+                    return;
+                }
+
                 Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
                 startActivity(intent);
             }
