@@ -1,12 +1,12 @@
-package com.entertech.edevn.auth;
+package com.entertech.edevn.Model;
 
 import retrofit2.Call;
 
-public class SignUp {
+public class SignUpModel {
 
     private String email;
 
-    public SignUp(String email) {
+    public SignUpModel(String email) {
         this.email = email;
     }
 

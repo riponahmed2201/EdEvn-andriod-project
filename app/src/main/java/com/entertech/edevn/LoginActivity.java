@@ -3,6 +3,7 @@ package com.entertech.edevn;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +12,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.entertech.edevn.api.Api;
-import com.entertech.edevn.auth.SignUp;
+import com.entertech.edevn.Network.Api;
+import com.entertech.edevn.Model.SignUpModel;
+import com.entertech.edevn.Network.RetrofitClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,8 +27,11 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginContinueButton;
     private EditText editTextEmailOrPhoneNumber;
     String emailOrPhone;
+
     private Api api;
-    private String BASE_URL = "https://backend-edevn-server.glitch.me/";
+
+    Retrofit retrofit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         loginContinueButton = (Button) findViewById(R.id.login_continue_btn_id);
         editTextEmailOrPhoneNumber = (EditText)  findViewById(R.id.login_email_or_phone_number_id);
 
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        retrofit = RetrofitClient.getClient();
 
         api = retrofit.create(Api.class);
 
@@ -48,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
+
                 if (emailOrPhone.isEmpty()){
                     editTextEmailOrPhoneNumber.setError("Email is required.");
                     editTextEmailOrPhoneNumber.requestFocus();
@@ -67,37 +69,39 @@ public class LoginActivity extends AppCompatActivity {
 
     private void createUser()
     {
-        SignUp signUp = new SignUp(emailOrPhone);
+        SignUpModel signUpModel = new SignUpModel(emailOrPhone);
 //        Call<SignUp> call = retrofitClientApi.createUser("admin@gmail.com");
-        Call<SignUp> call = api.createUser(signUp);
+        Call<SignUpModel> call = api.createUser(signUpModel);
 
-        call.enqueue(new Callback<SignUp>() {
+        call.enqueue(new Callback<SignUpModel>() {
             @Override
-            public void onResponse(Call<SignUp> call, Response<SignUp> response) {
-                if (!response.isSuccessful()){
-                   // textViewResult.setText("Code:"+ response.code());
-                    Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+            public void onResponse(Call<SignUpModel> call, Response<SignUpModel> response)
+            {
+                if (response.code() == 200)
+                {
+//                    ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+//                    progressDialog.setCancelable(false);
+//                    progressDialog.setIndeterminate(false);
+//                    progressDialog.setTitle("Create an account.");
+//                    progressDialog.show();
+
+                    Toast.makeText(LoginActivity.this, "Signup successfully.", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+
+                    Log.d("RRR: ", response.body().toString() + "  Message: " +response.message());
+
+                    Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
+                    intent.putExtra("email",emailOrPhone);
+                    startActivity(intent);
                 }
-
-                SignUp signUpResponse = response.body();
-
-//                ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-//                progressDialog.setCancelable(false);
-//                progressDialog.setIndeterminate(false);
-//                progressDialog.setTitle("Create an account.");
-//                progressDialog.show();
-
-                Toast.makeText(LoginActivity.this, response.message(), Toast.LENGTH_SHORT).show();
-
-                String getEmailAfterSignUp = signUpResponse.getEmail();
-
-                Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-                intent.putExtra("email",getEmailAfterSignUp);
-                startActivity(intent);
+                else {
+                    Toast.makeText(LoginActivity.this, "error: " + response.message(), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
-            public void onFailure(Call<SignUp> call, Throwable t) {
+            public void onFailure(Call<SignUpModel> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
