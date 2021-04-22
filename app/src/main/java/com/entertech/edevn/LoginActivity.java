@@ -12,10 +12,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.entertech.edevn.Model.SignUpResponse;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Model.SignUpModel;
 import com.entertech.edevn.Network.RetrofitClient;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -69,42 +71,88 @@ public class LoginActivity extends AppCompatActivity {
 
     private void createUser()
     {
-        SignUpModel signUpModel = new SignUpModel(emailOrPhone);
+//        SignUpModel signUpModel = new SignUpModel(emailOrPhone);
 //        Call<SignUp> call = retrofitClientApi.createUser("admin@gmail.com");
-        Call<SignUpModel> call = api.createUser(signUpModel);
+//        Call call = api.createUser(emailOrPhone);
+        Call<ResponseBody> call = api.createUser(new SignUpModel(emailOrPhone));
 
-        call.enqueue(new Callback<SignUpModel>() {
+        call.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<SignUpModel> call, Response<SignUpModel> response)
-            {
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                Log.d("RRR: ", response.code() + "  Message: " +response.message());
+
                 if (response.code() == 200)
                 {
-//                    ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-//                    progressDialog.setCancelable(false);
-//                    progressDialog.setIndeterminate(false);
-//                    progressDialog.setTitle("Create an account.");
-//                    progressDialog.show();
-
                     Toast.makeText(LoginActivity.this, "Signup successfully.", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
-
-                    Log.d("RRR: ", response.body().toString() + "  Message: " +response.message());
+//                    Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+//
+//                    Log.d("RRR: ", response.body().toString() + "  Message: " +response.message());
 
                     Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
                     intent.putExtra("email",emailOrPhone);
                     startActivity(intent);
                 }
-                else {
-                    Toast.makeText(LoginActivity.this, "error: " + response.message(), Toast.LENGTH_SHORT).show();
+              else  if (response.code() == 409){
+                    Toast.makeText(LoginActivity.this, "OK", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("email",emailOrPhone);
+                    startActivity(intent);
                 }
             }
 
             @Override
-            public void onFailure(Call<SignUpModel> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
             }
         });
+
+//        call.enqueue(new Callback() {
+//            @Override
+//            public void onResponse(Call call, Response response)
+//            {
+//
+////                SignUpModel signUpModel1 = response.body();
+//
+//                SignUpResponse signUpResponse = response.body();
+//
+//                if (response.code() == 200)
+//                {
+////                    ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
+////                    progressDialog.setCancelable(false);
+////                    progressDialog.setIndeterminate(false);
+////                    progressDialog.setTitle("Create an account.");
+////                    progressDialog.show();
+//
+//                    Toast.makeText(LoginActivity.this, "Signup successfully.", Toast.LENGTH_SHORT).show();
+//
+//                    Toast.makeText(LoginActivity.this, response.body().toString(), Toast.LENGTH_SHORT).show();
+//
+//                    Log.d("RRR: ", response.body().toString() + "  Message: " +response.message());
+//
+//                    Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
+//                    intent.putExtra("email",emailOrPhone);
+//                    startActivity(intent);
+//                }
+////                else if(signUpModel1.getStatus().equals("exists")){
+////
+////                    Toast.makeText(LoginActivity.this, "Your email already exists. home activity" , Toast.LENGTH_SHORT).show();
+////                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+////                    intent.putExtra("email",emailOrPhone);
+////                    startActivity(intent);
+////                }
+//
+//                else {
+//                    Toast.makeText(LoginActivity.this, "error: " + response.message(), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<SignUpModel> call, Throwable t) {
+//                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     private void userSignUp(){

@@ -1,17 +1,24 @@
 package com.entertech.edevn;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
     private CardView liveClassDetailsId;
     private LinearLayout homeMathSubId;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +26,9 @@ public class HomeActivity extends AppCompatActivity {
 
         liveClassDetailsId = findViewById(R.id.live_class_details_Id);
         homeMathSubId = findViewById(R.id.home_math_sub_Id);
+        toolbar = findViewById(R.id.home_menu_tool_bar_id);
+
+        setSupportActionBar(toolbar);
 
         //for live class intent class switch to live class activity
         liveClassDetailsId.setOnClickListener(new View.OnClickListener() {
@@ -37,5 +47,39 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    //menu bar all code here
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+//        MenuInflater menuInflater = getMenuInflater();
+
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.home_menu_bar,menu);
+        return true;
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.share_menu_id)
+        {
+            Toast.makeText(this, "You Click share menu", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (id == R.id.logout_menu_id)
+        {
+            Toast.makeText(this, "Logout successfully!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
