@@ -67,23 +67,25 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (!isConnected(LoginActivity.this)){
                     showCustomDialog();
+                }else {
+                    emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
+
+                    if (emailOrPhone.isEmpty()){
+                        editTextEmailOrPhoneNumber.setError("Email is required.");
+                        editTextEmailOrPhoneNumber.requestFocus();
+                        return;
+                    }
+
+                    if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()){
+                        editTextEmailOrPhoneNumber.setError("Please enter a valid email.");
+                        editTextEmailOrPhoneNumber.requestFocus();
+                        return;
+                    }
+
+                    createUser();
                 }
 
-                emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
 
-                if (emailOrPhone.isEmpty()){
-                    editTextEmailOrPhoneNumber.setError("Email is required.");
-                    editTextEmailOrPhoneNumber.requestFocus();
-                    return;
-                }
-
-                if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()){
-                    editTextEmailOrPhoneNumber.setError("Please enter a valid email.");
-                    editTextEmailOrPhoneNumber.requestFocus();
-                    return;
-                }
-
-                createUser();
             }
         });
     }
@@ -102,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    //Dialog message method
+    //Dialog message method for Internet connection
     private void showCustomDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setMessage("Please connect to the internet to proceed further")
@@ -120,6 +122,11 @@ public class LoginActivity extends AppCompatActivity {
                         finish();
                     }
                 });
+
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                //alert.setTitle("AlertDialogExample");
+                alert.show();
     }
 
     //Create user or SignUp method
