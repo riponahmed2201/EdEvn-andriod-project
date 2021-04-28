@@ -16,6 +16,7 @@ import com.entertech.edevn.Model.SignUpResponse;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Model.SignUpModel;
 import com.entertech.edevn.Network.RetrofitClient;
+import com.entertech.edevn.userManagement.UserPreference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
 
     Retrofit retrofit;
 
+    private UserPreference userPreference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         editTextEmailOrPhoneNumber = (EditText)  findViewById(R.id.login_email_or_phone_number_id);
 
         retrofit = RetrofitClient.getClient();
-
         api = retrofit.create(Api.class);
+
+        userPreference = new UserPreference(this);
 
         loginContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,15 +89,23 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (response.code() == 200){
                     SignUpResponse signUpResponse = response.body();
+
+                    // save user info to userPreference
+                    userPreference.saveUser(emailOrPhone);
                     Toast.makeText(LoginActivity.this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-                        intent.putExtra("email",emailOrPhone);
+                       // intent.putExtra("email",emailOrPhone);
                         startActivity(intent);
                 }else{
-//                    SignUpResponse signUpResponse = response.body();
+                    //response from api
+                    SignUpResponse signUpResponse = response.body();
+
+                    // user info store userPreference
+                    userPreference.saveUser(emailOrPhone);
+
                     Toast.makeText(LoginActivity.this, "User already exists.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                    intent.putExtra("email",emailOrPhone);
+                    //intent.putExtra("email",emailOrPhone);
                     startActivity(intent);
                 }
             }
