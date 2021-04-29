@@ -1,4 +1,4 @@
-package com.entertech.edevn.Model;
+package com.entertech.edevn.Model.PojoClass;
 
 public class SignUpResponse {
     private String status;

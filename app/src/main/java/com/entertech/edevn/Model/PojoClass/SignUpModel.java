@@ -1,4 +1,4 @@
-package com.entertech.edevn.Model;
+package com.entertech.edevn.Model.PojoClass;
 
 import retrofit2.Call;
 
