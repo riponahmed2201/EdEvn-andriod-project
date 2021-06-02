@@ -6,16 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class LiveClassActivity extends AppCompatActivity {
 
     private ImageView liveClassBackId;
+    private LinearLayout bookNowId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_class);
 
         liveClassBackId = findViewById(R.id.live_class_back_Id);
+        bookNowId = findViewById(R.id.book_now_id);
 
         liveClassBackId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,5 +28,12 @@ public class LiveClassActivity extends AppCompatActivity {
             }
         });
 
+        bookNowId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LiveClassActivity.this, BookNowActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

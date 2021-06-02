@@ -30,7 +30,7 @@
 <!--            android:layout_height="43dp"/>-->
 
         <TextView
-            android:text="Live Classes"
+            android:text=" FREE Live Classes"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:textFontWeight="500"
@@ -212,6 +212,7 @@
                         android:layout_height="1dp"/>
 
                     <LinearLayout
+                        android:id="@+id/book_now_id"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">

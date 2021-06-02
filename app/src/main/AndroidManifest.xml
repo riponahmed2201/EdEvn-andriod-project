@@ -12,7 +12,8 @@
         android:roundIcon="@drawable/main_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EDEVN">
-        <activity android:name=".ViewProfileActivity"></activity>
+        <activity android:name=".BookNowActivity"></activity>
+        <activity android:name=".ViewProfileActivity" />
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".SubjectDetailsActivity" />
         <activity android:name=".LiveClassActivity" />

@@ -328,8 +328,8 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Live Classes"
-                            android:textColor="@color/white"
+                            android:text="FREE Live Classes"
+                            android:textColor="#FFFFFF"
                             android:textSize="20sp" />
 
                         <TextView
@@ -343,6 +343,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:textAllCaps="true"
                             android:layout_width="167dp"
                             android:layout_height="36dp"
                             android:layout_marginStart="16dp"
@@ -383,7 +384,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/resume_study_recycler_view_id"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginRight="16dp">
 
                 </androidx.recyclerview.widget.RecyclerView>
 

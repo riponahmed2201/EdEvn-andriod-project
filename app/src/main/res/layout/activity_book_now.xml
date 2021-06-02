@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/confetti"
+    tools:context=".BookNowActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#e5e8f7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/book_now_cross_menu_icon_id"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cross_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/claender_icon" />
+
+        <TextView
+            android:textFontWeight="600"
+            android:layout_marginTop="16dp"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Your Seat is Booked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textFontWeight="400"
+            android:textAlignment="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="Introduction to Matmatics by Shourov Alam Sir"
+            android:layout_width="296dp"
+            android:layout_height="48dp"/>
+
+        <TextView
+            android:textFontWeight="600"
+            android:layout_marginTop="36dp"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Monday, 26 Apr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textFontWeight="400"
+            android:layout_marginTop="8dp"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="7:30 PM - 8:45 PM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="#4675CD"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/facebook"
+                android:layout_width="12dp"
+                android:layout_height="23dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="#8883FF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/message"
+                android:layout_width="23dp"
+                android:layout_height="22dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="#25D366"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/whatsapp"
+                android:layout_width="23dp"
+                android:layout_height="23dp"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="15dp"
+            app:cardBackgroundColor="#0078FF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/messanger"
+                android:layout_width="23dp"
+                android:layout_height="23dp"/>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
