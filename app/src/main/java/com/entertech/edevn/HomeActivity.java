@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -68,7 +67,7 @@ public class HomeActivity extends AppCompatActivity {
         liveClassDetailsId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, LiveClassActivity.class);
+                Intent intent = new Intent(HomeActivity.this, FreeLiveClassActivity.class);
                 startActivity(intent);
             }
         });

@@ -20,7 +20,7 @@ public class BookNowActivity extends AppCompatActivity {
         bookNowCrossMenuIconId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookNowActivity.this, LiveClassActivity.class);
+                Intent intent = new Intent(BookNowActivity.this, FreeLiveClassActivity.class);
                 startActivity(intent);
             }
         });
