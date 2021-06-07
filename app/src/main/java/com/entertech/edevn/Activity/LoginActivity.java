@@ -1,4 +1,4 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.entertech.edevn.Model.PojoClass.SignUpResponse;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Network.RetrofitClient;
+import com.entertech.edevn.R;
 import com.entertech.edevn.userManagement.UserPreference;
 
 import retrofit2.Call;

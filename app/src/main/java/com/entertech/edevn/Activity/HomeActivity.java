@@ -1,4 +1,4 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +22,7 @@ import com.entertech.edevn.Model.PojoClass.ResumeStudy;
 import com.entertech.edevn.Model.ResumeStudyInfo;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Network.RetrofitClient;
+import com.entertech.edevn.R;
 import com.entertech.edevn.Utils.Utils;
 
 import retrofit2.Call;

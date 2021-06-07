@@ -7,7 +7,7 @@
     android:background="#5b5add"
     android:layout_gravity="center"
     android:orientation="vertical"
-    tools:context=".ClassSelectActivity">
+    tools:context=".Activity.ClassSelectActivity">
 
     <TextView
         android:layout_marginTop="150dp"

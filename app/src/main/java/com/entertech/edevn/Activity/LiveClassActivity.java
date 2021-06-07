@@ -1,4 +1,4 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -6,6 +6,8 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.entertech.edevn.R;
 
 public class LiveClassActivity extends AppCompatActivity {
 

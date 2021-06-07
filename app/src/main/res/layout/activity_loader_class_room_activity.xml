@@ -6,7 +6,7 @@
     android:gravity="center"
     android:background="#5b5add"
     android:layout_height="match_parent"
-    tools:context=".LoaderClassRoomActivity">
+    tools:context=".Activity.LoaderClassRoomActivity">
 
     <TextView
         android:lineHeight="32sp"

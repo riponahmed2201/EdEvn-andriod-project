@@ -1,4 +1,4 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.entertech.edevn.R;
 
 public class FreeLiveClassActivity extends AppCompatActivity {
 

@@ -1,34 +1,30 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.entertech.edevn.R;
+
 import static java.lang.Thread.sleep;
 
-public class LoaderVerificationActivity extends AppCompatActivity {
+public class OTPVerificationActivity extends AppCompatActivity {
 
-    private String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loader_verfication);
+        setContentView(R.layout.activity_o_t_p_verification);
 
-        Bundle bundle = getIntent().getExtras();
-
-        if (bundle != null){
-            email = bundle.getString("email");
-        }
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    sleep(4000);
-                    Intent intent = new Intent(LoaderVerificationActivity.this, OTPVerificationActivity.class);
-                    intent.putExtra("email",email);
+                    sleep(9000);
+                    Intent intent = new Intent(OTPVerificationActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -36,6 +32,5 @@ public class LoaderVerificationActivity extends AppCompatActivity {
         });
 
         thread.start();
-
     }
 }

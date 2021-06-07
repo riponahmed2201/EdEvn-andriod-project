@@ -1,14 +1,15 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.entertech.edevn.R;
 
 public class ClassSelectActivity extends AppCompatActivity {
 

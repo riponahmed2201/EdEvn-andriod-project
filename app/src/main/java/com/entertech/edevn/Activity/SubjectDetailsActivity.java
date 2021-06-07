@@ -1,4 +1,4 @@
-package com.entertech.edevn;
+package com.entertech.edevn.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.entertech.edevn.R;
 
 public class SubjectDetailsActivity extends AppCompatActivity {
 
