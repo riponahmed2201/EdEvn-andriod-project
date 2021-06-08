@@ -144,6 +144,7 @@
      android:layout_height="match_parent">
 
      <Button
+         android:fontFamily="@font/roboto_regular"
          android:id="@+id/start_learning_button_id"
          android:layout_alignParentBottom="true"
          android:textAllCaps="true"

@@ -149,17 +149,17 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        else if (id == R.id.update_profile_menu_id)
-        {
-            Intent intent = new Intent(HomeActivity.this, UpdateProfileActivity.class);
-            startActivity(intent);
-        }
-
-        else if (id == R.id.view_profile_menu_id)
-        {
-            Intent intent = new Intent(HomeActivity.this, ViewProfileActivity.class);
-            startActivity(intent);
-        }
+//        else if (id == R.id.update_profile_menu_id)
+//        {
+//            Intent intent = new Intent(HomeActivity.this, UpdateProfileActivity.class);
+//            startActivity(intent);
+//        }
+//
+//        else if (id == R.id.view_profile_menu_id)
+//        {
+//            Intent intent = new Intent(HomeActivity.this, ViewProfileActivity.class);
+//            startActivity(intent);
+//        }
 
         return super.onOptionsItemSelected(item);
     }

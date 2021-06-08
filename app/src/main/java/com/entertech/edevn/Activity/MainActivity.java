@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ExamFragment examFragment;
     private LiveClassFragment liveClassFragment;
     private ProfileFragment profileFragment;
-    Toolbar toolbar;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        //MenuInflater menuInflater = getMenuInflater();
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.home_menu_bar,menu);
+       // menuInflater.inflate(R.menu.home_menu_bar,menu);
         return true;
     }
 
@@ -95,17 +98,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        else if (id == R.id.update_profile_menu_id)
-        {
-            Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
-            startActivity(intent);
-        }
+//        else if (id == R.id.update_profile_menu_id)
+//        {
+//            Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+//            startActivity(intent);
+//        }
 
-        else if (id == R.id.view_profile_menu_id)
-        {
-            Intent intent = new Intent(MainActivity.this, ViewProfileActivity.class);
-            startActivity(intent);
-        }
+//        else if (id == R.id.view_profile_menu_id)
+//        {
+//            Intent intent = new Intent(MainActivity.this, ViewProfileActivity.class);
+//            startActivity(intent);
+//        }
 
         return super.onOptionsItemSelected(item);
     }
