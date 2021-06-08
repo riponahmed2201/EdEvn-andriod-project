@@ -1,8 +1,11 @@
 package com.entertech.edevn.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.entertech.edevn.Fragment.ExamFragment;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ExamFragment examFragment;
     private LiveClassFragment liveClassFragment;
     private ProfileFragment profileFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +38,30 @@ public class MainActivity extends AppCompatActivity {
         liveClassFragment = new LiveClassFragment();
         profileFragment = new ProfileFragment();
 
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,homeFragment).commit();
+        }
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                Fragment fragment = null;
+                if (item.getItemId() == R.id.home_bottom_navigation_id){
+                    fragment = homeFragment;
+                }
+                if (item.getItemId() == R.id.live_class_bottom_navigation_id){
+                    fragment = liveClassFragment;
+                }
+                if (item.getItemId() == R.id.exam_bottom_navigation_id){
+                    fragment = examFragment;
+                }
+                if (item.getItemId() == R.id.profile_bottom_navigation_id){
+                    fragment = profileFragment;
+                }
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment).commit();
+                return true;
+            }
+        });
     }
 }

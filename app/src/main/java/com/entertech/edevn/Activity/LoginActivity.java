@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.entertech.edevn.Fragment.HomeFragment;
 import com.entertech.edevn.Model.PojoClass.SignUpResponse;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Network.RetrofitClient;
@@ -146,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
                     userPreference.saveUser(emailOrPhone);
 
                     Toast.makeText(LoginActivity.this, "User already exists.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     //intent.putExtra("email",emailOrPhone);
                     startActivity(intent);
                 }
