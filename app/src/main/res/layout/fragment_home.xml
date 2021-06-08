@@ -1,13 +1,612 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f5f9"
+    android:orientation="vertical"
     tools:context=".Fragment.HomeFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <TextView-->
+            <!--                android:text="sdkjdskfdsfj"-->
+            <!--                android:id="@+id/text_view_result"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:textColor="#000"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/home_math_sub_Id"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/math_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Mathematics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/english_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="English"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/science_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="Science"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FFC035"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#1CD09C"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#53A9FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/bangla_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#3FA0F9"
+                            android:text="Bangla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/commerce_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#FF927D"
+                            android:text="Commerce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/technology_icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#8883FF"
+                            android:text="ICT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f2f5f9"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/live_class_details_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="15dp"
+                    app:cardBackgroundColor="#8483f3"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="FREE Live Classes"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="9dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Online tutions by the best teachers live doubt solving and one-to-one solution"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:textAllCaps="true"
+                            android:layout_width="167dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Book a free class"
+                            android:textColor="@color/white"
+                            android:textFontWeight="500"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/live_class_home_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="327dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineHeight="16dp"
+                    android:text="Resume Your Study"
+                    android:textAllCaps="true"
+                    android:textColor="#212121"
+                    android:textFontWeight="600"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resume_study_recycler_view_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginRight="16dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="327dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineHeight="16dp"
+                    android:text="Top Picks"
+                    android:textAllCaps="true"
+                    android:textColor="#212121"
+                    android:textFontWeight="600"
+                    android:textSize="10sp"
+                    android:textStyle="normal"
+                    tools:ignore="SmallSp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedScrolling">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="216dp"
+                            android:layout_height="185dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="216dp"
+                                android:layout_height="185dp"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:id="@+id/top_picks_bird"
+                                    android:layout_width="216dp"
+                                    android:layout_height="122dp"
+                                    android:background="@drawable/resume_study_bg_image"
+                                    android:src="@drawable/top_picks_bird_img_wrapper" />
+
+                                <TextView
+                                    android:id="@+id/top_picks_bird_title"
+                                    android:layout_width="184dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/top_picks_bird"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Why birds fly in V format"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="216dp"
+                            android:layout_height="185dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="216dp"
+                                android:layout_height="185dp"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:id="@+id/top_picks_battle_img"
+                                    android:layout_width="216dp"
+                                    android:layout_height="122dp"
+                                    android:background="@drawable/resume_study_bg_image"
+                                    android:src="@drawable/top_picks_bird_img_wrapper" />
+
+                                <TextView
+                                    android:layout_marginTop="8dp"
+                                    android:id="@+id/top_picks_battle_title"
+                                    android:layout_width="184dp"
+                                    android:layout_height="32dp"
+                                    android:layout_below="@+id/top_picks_battle_img"
+                                    android:layout_marginLeft="16dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Every battle learning is journey"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="216dp"
+                            android:layout_height="185dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="5dp"
+                            tools:ignore="TooManyViews">
+
+                            <RelativeLayout
+                                android:layout_width="216dp"
+                                android:layout_height="185dp"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <ImageView
+                                    android:id="@+id/top_picks_battle_img2"
+                                    android:layout_width="216dp"
+                                    android:layout_height="122dp"
+                                    android:background="@drawable/resume_study_bg_image"
+                                    android:src="@drawable/top_picks_bird_img_wrapper" />
+
+                                <TextView
+                                    android:id="@+id/top_picks_battle_title2"
+                                    android:layout_width="184dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/top_picks_battle_img2"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Every learning is journey"
+                                    android:textColor="#212121"
+                                    android:textFontWeight="500"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="67dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/math_icon"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"/>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textSize="10sp"
+                                    android:textFontWeight="600"
+                                    android:textColor="#6C6BE1"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Test Your Khnowledge"
+                                    android:textAllCaps="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textFontWeight="500"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textColor="#212121"
+                                    android:textSize="20sp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginStart="16dp"
+                                    android:text="Challenege others in a quizz."
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:fontFamily="@font/poppins_regular"
+                                android:drawableRight="@drawable/start_quize_icon_arrow"
+                                android:paddingRight="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginStart="16dp"
+                                android:background="@drawable/start_quize_bow_btn"
+                                android:textAlignment="center"
+                                android:text="Start Now"
+                                android:textColor="#FFFFFF"
+                                android:textAllCaps="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

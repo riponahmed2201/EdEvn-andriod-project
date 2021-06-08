@@ -33,6 +33,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
+        android:layout_above="@id/bottom_navigation_view"
         android:id="@+id/frame_layout"
         android:layout_below="@id/home_menu_tool_bar_id"
         android:layout_width="match_parent"
