@@ -25,7 +25,7 @@ public class FreeLiveClassActivity extends AppCompatActivity {
         liveClassBackId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FreeLiveClassActivity.this, HomeActivity.class);
+                Intent intent = new Intent(FreeLiveClassActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

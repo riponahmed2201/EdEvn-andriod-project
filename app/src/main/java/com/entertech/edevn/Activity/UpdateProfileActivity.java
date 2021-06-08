@@ -26,7 +26,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         updateProfileBackButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UpdateProfileActivity.this, HomeActivity.class);
+                Intent intent = new Intent(UpdateProfileActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

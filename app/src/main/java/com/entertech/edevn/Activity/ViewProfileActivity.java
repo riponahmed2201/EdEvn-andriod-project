@@ -26,7 +26,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         viewProfileBackButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewProfileActivity.this, HomeActivity.class);
+                Intent intent = new Intent(ViewProfileActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

@@ -2,11 +2,15 @@ package com.entertech.edevn.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.entertech.edevn.Fragment.ExamFragment;
 import com.entertech.edevn.Fragment.HomeFragment;
@@ -24,11 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private ExamFragment examFragment;
     private LiveClassFragment liveClassFragment;
     private ProfileFragment profileFragment;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setSupportActionBar(toolbar);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         frameLayout = findViewById(R.id.frame_layout);
@@ -63,5 +69,44 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.home_menu_bar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.share_menu_id)
+        {
+            Toast.makeText(this, "You Click share menu", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (id == R.id.logout_menu_id)
+        {
+            Toast.makeText(this, "Logout successfully!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+
+        else if (id == R.id.update_profile_menu_id)
+        {
+            Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+            startActivity(intent);
+        }
+
+        else if (id == R.id.view_profile_menu_id)
+        {
+            Intent intent = new Intent(MainActivity.this, ViewProfileActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
