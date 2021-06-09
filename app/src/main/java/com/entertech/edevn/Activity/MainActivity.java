@@ -1,8 +1,11 @@
 package com.entertech.edevn.Activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -10,7 +13,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.entertech.edevn.Fragment.ExamFragment;
@@ -19,11 +24,15 @@ import com.entertech.edevn.Fragment.LiveClassFragment;
 import com.entertech.edevn.Fragment.ProfileFragment;
 import com.entertech.edevn.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
+    private NavigationView drawerNavigationView;
+    private DrawerLayout drawerLayout;
+    private ImageView drawerMenuId;
 
     private HomeFragment homeFragment;
     private ExamFragment examFragment;
@@ -39,6 +48,24 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         frameLayout = findViewById(R.id.frame_layout);
+        drawerMenuId = findViewById(R.id.drawer_menu_id);
+
+//        drawerNavigationView = findViewById(R.id.drawer_navigation_view);
+//        drawerLayout = findViewById(R.id.drawer_layout);
+//
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
+//                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+//
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
+
+        drawerMenuId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,DrawerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         homeFragment = new HomeFragment();
         examFragment = new ExamFragment();
@@ -112,4 +139,13 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//        }else {
+//            super.onBackPressed();
+//        }
+//    }
 }
