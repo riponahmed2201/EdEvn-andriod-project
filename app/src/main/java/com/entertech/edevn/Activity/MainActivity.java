@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
     private NavigationView drawerNavigationView;
     private DrawerLayout drawerLayout;
-    private ImageView drawerMenuId;
+//    private ImageView drawerMenuId;
 
     private HomeFragment homeFragment;
     private ExamFragment examFragment;
@@ -48,24 +48,25 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         frameLayout = findViewById(R.id.frame_layout);
-        drawerMenuId = findViewById(R.id.drawer_menu_id);
+//        drawerMenuId = findViewById(R.id.drawer_menu_id);
+        toolbar = findViewById(R.id.toolbar);
 
-//        drawerNavigationView = findViewById(R.id.drawer_navigation_view);
-//        drawerLayout = findViewById(R.id.drawer_layout);
-//
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
-//                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-//
-//        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
+        drawerNavigationView = findViewById(R.id.navigation_view);
+        drawerLayout = findViewById(R.id.drawer_layout);
 
-        drawerMenuId.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DrawerActivity.class);
-                startActivity(intent);
-            }
-        });
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
+                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+//        drawerMenuId.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this,DrawerActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         homeFragment = new HomeFragment();
         examFragment = new ExamFragment();
@@ -140,12 +141,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
-//            drawerLayout.closeDrawer(GravityCompat.START);
-//        }else {
-//            super.onBackPressed();
-//        }
-//    }
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else {
+            super.onBackPressed();
+        }
+    }
 }
