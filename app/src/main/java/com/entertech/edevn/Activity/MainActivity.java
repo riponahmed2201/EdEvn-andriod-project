@@ -26,7 +26,7 @@ import com.entertech.edevn.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
@@ -44,15 +44,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setSupportActionBar(toolbar);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         frameLayout = findViewById(R.id.frame_layout);
-//        drawerMenuId = findViewById(R.id.drawer_menu_id);
+
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        //toolbar.setTitle("EDEVN");
 
         drawerNavigationView = findViewById(R.id.navigation_view);
         drawerLayout = findViewById(R.id.drawer_layout);
+
+        //drawerNavigationView.setNavigationItemSelectedListener(this);
+        drawerNavigationView.setNavigationItemSelectedListener(MainActivity.this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
                 R.string.navigation_drawer_open,R.string.navigation_drawer_close);
@@ -60,13 +64,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-//        drawerMenuId.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this,DrawerActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         homeFragment = new HomeFragment();
         examFragment = new ExamFragment();
@@ -148,5 +145,21 @@ public class MainActivity extends AppCompatActivity {
         }else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.nav_message:
+                Toast.makeText(this, "Message", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_chat:
+                Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 }

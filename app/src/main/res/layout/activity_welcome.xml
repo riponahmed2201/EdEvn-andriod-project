@@ -18,6 +18,7 @@
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/white"
         android:layout_height="30dp"/>
+
     <TextView
         android:textAlignment="center"
         android:textSize="14sp"

@@ -11,12 +11,13 @@ import com.entertech.edevn.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
+    private Button welcomeContinueButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        Button welcomeContinueButton = findViewById(R.id.welcome_continue_button);
+        welcomeContinueButton = findViewById(R.id.welcome_continue_button);
 
         welcomeContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
