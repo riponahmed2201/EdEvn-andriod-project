@@ -56,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //drawerNavigationView.setNavigationItemSelectedListener(this);
         drawerNavigationView.setNavigationItemSelectedListener(MainActivity.this);
 
+        //for icon exact color visible
+        drawerNavigationView.setItemIconTintList(null);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
                 R.string.navigation_drawer_open,R.string.navigation_drawer_close);
 
@@ -149,11 +152,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.nav_message:
-                Toast.makeText(this, "Message", Toast.LENGTH_SHORT).show();
+            case R.id.nav_edevn_premium:
+                Toast.makeText(this, "Edevn Premium", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nav_chat:
-                Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
+            case R.id.nav_learning_analysis:
+                Toast.makeText(this, "Learning Analysis", Toast.LENGTH_SHORT).show();
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);

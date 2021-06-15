@@ -2,15 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="#E91E63"
+    android:background="#fafbfd"
+    android:orientation="vertical"
     android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:orientation="vertical">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Entertech"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/drawer_header_menu_icon_class_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawer_header_menu_icon_class" />
+
+        <TextView
+            android:id="@+id/drawer_header_menu_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Change"
+            android:textAllCaps="true"
+            android:textColor="#6C6BE1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:textFontWeight="600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/drawer_header_menu_icon_class_id"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Class 10"
+            android:textColor="#212121"
+            android:textSize="24sp" />
+    </RelativeLayout>
 </LinearLayout>

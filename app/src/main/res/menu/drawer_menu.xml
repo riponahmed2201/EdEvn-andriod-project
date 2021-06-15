@@ -3,29 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_message"
-            android:icon="@drawable/ic_launcher_background"
-            android:title="Edevn Premium" />
+            android:checked="true"
+            android:id="@+id/nav_edevn_premium"
+            android:icon="@drawable/drawer_header_menu_premium"
+            android:title="Edevn Premium"/>
         <item
-            android:id="@+id/nav_chat"
-            android:icon="@drawable/ic_launcher_background"
-            android:title="Learning Analysis" />
+            android:id="@+id/nav_learning_analysis"
+            android:icon="@drawable/drawer_header_menu_learing_analysis"
+            android:title="Learning Analysis"/>
     </group>
 
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
 
         <item
-            android:title="">
-            <menu>
-                <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_launcher_background"
-                    android:title="Share" />
-                <item
-                    android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_launcher_background"
-                    android:title="Send" />
-            </menu>
-        </item>
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/drawer_header_menu_notifications"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/drawer_header_menu_support"
+            android:title="Support" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/drawer_header_menu_settings"
+            android:title="Settings" />
+
+    </group>
 </menu>
