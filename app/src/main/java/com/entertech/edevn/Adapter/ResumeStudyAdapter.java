@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.entertech.edevn.R;
 import com.entertech.edevn.Utils.Utils;
+import com.squareup.picasso.Picasso;
 
 public class ResumeStudyAdapter extends RecyclerView.Adapter<ResumeStudyAdapter.ViewHolder> {
 
@@ -33,6 +34,7 @@ public class ResumeStudyAdapter extends RecyclerView.Adapter<ResumeStudyAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.resumeMathSubjectName.setText(Utils.resumeStudyInfoArrayList.get(position).getChapterName());
+        Picasso.get().load(Utils.resumeStudyInfoArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.resumeMathSubjectImage);
     }
 
     @Override

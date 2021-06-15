@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FrameLayout frameLayout;
     private NavigationView drawerNavigationView;
     private DrawerLayout drawerLayout;
-//    private ImageView drawerMenuId;
-
     private HomeFragment homeFragment;
     private ExamFragment examFragment;
     private LiveClassFragment liveClassFragment;

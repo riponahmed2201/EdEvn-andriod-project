@@ -33,11 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginContinueButton;
     private EditText editTextEmailOrPhoneNumber;
     String emailOrPhone;
-
     private Api api;
-
     Retrofit retrofit;
-
     private UserPreference userPreference;
 
     @Override
