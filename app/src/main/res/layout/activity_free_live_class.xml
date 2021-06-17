@@ -212,7 +212,7 @@
                         android:layout_height="1dp"/>
 
                     <LinearLayout
-                        android:id="@+id/book_now_id"
+                       android:id="@+id/book_now_id"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
