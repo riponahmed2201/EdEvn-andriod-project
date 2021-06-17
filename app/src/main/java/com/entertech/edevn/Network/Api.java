@@ -1,5 +1,7 @@
 package com.entertech.edevn.Network;
 
+import com.entertech.edevn.Model.FreeLiveModelClass;
+import com.entertech.edevn.Model.PojoClass.FreeLiveMainDataClass;
 import com.entertech.edevn.Model.PojoClass.ResumeMainDataClass;
 import com.entertech.edevn.Model.PojoClass.SignUpResponse;
 
@@ -24,5 +26,9 @@ public interface Api {
     //get all resume
     @GET("resumestudy")
     Call <ResumeMainDataClass> getAllResumeClass();
+
+    //get all free live class course
+    @GET("courses/free-classes")
+    Call<FreeLiveMainDataClass> getAllFreeClassList();
 
 }
