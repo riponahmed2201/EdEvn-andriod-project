@@ -31,15 +31,9 @@ public class TeacherListAdapter extends RecyclerView.Adapter<TeacherListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull TeacherListAdapter.ViewHolder holder, int position) {
-
+             holder.liveClassTeacherNameId.setText(Utils.teacherListModelArrayList.get(position).getTeacherName());
+             Picasso.get().load(Utils.teacherListModelArrayList.get(position).getTeacherImage()).placeholder(R.drawable.business_image).into(holder.liveClassTeacherImageId);
     }
-
-//    @Override
-//    public void onBindViewHolder(@NonNull ResumeStudyAdapter.ViewHolder holder, int position) {
-//
-//       // holder.resumeMathSubjectName.setText(Utils.resumeStudyInfoArrayList.get(position).getChapterName());
-//        Picasso.get().load(Utils.resumeStudyInfoArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.resumeMathSubjectImage);
-//    }
 
     @Override
     public int getItemCount() {
@@ -48,8 +42,8 @@ public class TeacherListAdapter extends RecyclerView.Adapter<TeacherListAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView liveClassTeacherImageId;
-        private TextView liveClassTeacherNameId;
+        private final ImageView liveClassTeacherImageId;
+        private final TextView liveClassTeacherNameId;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

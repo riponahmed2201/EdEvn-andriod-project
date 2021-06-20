@@ -238,7 +238,7 @@
                 android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/Live_class_teacher_list_recycler_view_id"
+                    android:id="@+id/live_class_teacher_list_recycler_view_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

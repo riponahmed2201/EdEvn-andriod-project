@@ -2,6 +2,7 @@ package com.entertech.edevn.Network;
 
 import com.entertech.edevn.Model.PojoClass.ResumeMainDataClass;
 import com.entertech.edevn.Model.PojoClass.SignUpResponse;
+import com.entertech.edevn.Model.PojoClass.TeacherListPojo;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -26,6 +27,6 @@ public interface Api {
     Call <ResumeMainDataClass> getAllResumeClass();
 
     //instructor
-//    @GET("instructor")
-//    Call <ResumeMainDataClass> getAllResumeClass();
+    @GET("instructor")
+    Call <TeacherListPojo> getAllTeacherList();
 }
