@@ -25,4 +25,7 @@ public interface Api {
     @GET("resumestudy")
     Call <ResumeMainDataClass> getAllResumeClass();
 
+    //instructor
+//    @GET("instructor")
+//    Call <ResumeMainDataClass> getAllResumeClass();
 }
