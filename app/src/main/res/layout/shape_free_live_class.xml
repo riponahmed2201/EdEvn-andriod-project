@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -92,6 +93,7 @@
                     android:layout_height="4dp"/>
 
                 <TextView
+                    android:id="@+id/free_live_class_class_time_id"
                     android:textColor="#212121"
                     android:fontFamily="@font/poppins_regular"
                     android:textStyle="normal"

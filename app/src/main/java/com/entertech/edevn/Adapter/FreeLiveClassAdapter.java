@@ -31,8 +31,12 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
 
     @Override
     public void onBindViewHolder(@NonNull FreeLiveClassAdapter.ViewHolder holder, int position) {
-             holder.liveClassTeacherNameId.setText(Utils.teacherListModelArrayList.get(position).getTeacherName());
-             Picasso.get().load(Utils.teacherListModelArrayList.get(position).getTeacherImage()).placeholder(R.drawable.business_image).into(holder.freeLiveClassImageId);
+                holder.freeLiveClassChapterNameId.setText(Utils.freeLiveClassModelArrayList.get(position).getCourseTitle());
+                holder.free_live_class_subject_name_id.setText(Utils.freeLiveClassModelArrayList.get(position).getCategoryName());
+//             holder.free_live_class_class_time_id.setText(Utils.freeLiveClassModelArrayList.get(position).getClassTime());
+               // holder.free_live_class_duration_id.setText(Utils.freeLiveClassModelArrayList.get(position).getDuration());
+                //holder.free_live_class_seat_left_id.setText(Utils.freeLiveClassModelArrayList.get(position).getTotalSeats());
+             Picasso.get().load(Utils.freeLiveClassModelArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.freeLiveClassImageId);
     }
 
     @Override
@@ -43,13 +47,18 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private final ImageView freeLiveClassImageId;
-        private final TextView liveClassTeacherNameId;
+        private TextView free_live_class_subject_name_id,freeLiveClassChapterNameId, free_live_class_seat_left_id,free_live_class_class_time_id,free_live_class_duration_id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            free_live_class_subject_name_id = itemView.findViewById(R.id.free_live_class_subject_name_id);
             freeLiveClassImageId = itemView.findViewById(R.id.free_live_class_image_id);
-            liveClassTeacherNameId = itemView.findViewById(R.id.live_class_teacher_name_id);
+            freeLiveClassChapterNameId = itemView.findViewById(R.id.free_live_class_chapter_name_id);
+            free_live_class_seat_left_id = itemView.findViewById(R.id.free_live_class_seat_left_id);
+            free_live_class_class_time_id = itemView.findViewById(R.id.free_live_class_class_time_id);
+            free_live_class_duration_id = itemView.findViewById(R.id.free_live_class_duration_id);
+
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.entertech.edevn.Network;
 
+import com.entertech.edevn.Model.PojoClass.FreeLivePojoClass;
 import com.entertech.edevn.Model.PojoClass.ResumeMainDataClass;
 import com.entertech.edevn.Model.PojoClass.SignUpResponse;
 import com.entertech.edevn.Model.PojoClass.TeacherListPojo;
@@ -29,4 +30,8 @@ public interface Api {
     //instructor
     @GET("instructor")
     Call <TeacherListPojo> getAllTeacherList();
+
+    //courses/free-classes
+    @GET("courses/free-classes")
+    Call <FreeLivePojoClass> getAllFreeLiveClassCourseList();
 }
