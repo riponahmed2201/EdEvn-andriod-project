@@ -23,7 +23,6 @@ public class FreeLiveClassActivity extends AppCompatActivity {
     private LinearLayout bookNowId;
     private LinearLayoutManager linearLayoutManager;
     private RecyclerView liveClassRecyclerViewId;
-    TeacherListModel teacherListModel;
     private Api api;
 
     Retrofit retrofit;
@@ -60,12 +59,7 @@ public class FreeLiveClassActivity extends AppCompatActivity {
         retrofit = RetrofitClient.getClient();
         api = retrofit.create(Api.class);
 
-        //api call method getAlTeacherList()
-        getAlTeacherList();
     }
 
-    private void getAlTeacherList() {
-
-    }
 
 }

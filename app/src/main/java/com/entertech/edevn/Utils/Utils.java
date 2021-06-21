@@ -1,5 +1,6 @@
 package com.entertech.edevn.Utils;
 
+import com.entertech.edevn.Model.FreeLiveClassModel;
 import com.entertech.edevn.Model.ResumeStudyInfo;
 import com.entertech.edevn.Model.TeacherListModel;
 
@@ -9,4 +10,5 @@ public class Utils {
 
    public static ArrayList<ResumeStudyInfo> resumeStudyInfoArrayList = new ArrayList();
    public static ArrayList<TeacherListModel> teacherListModelArrayList = new ArrayList();
+   public static ArrayList<FreeLiveClassModel> freeLiveClassModelArrayList = new ArrayList();
 }
