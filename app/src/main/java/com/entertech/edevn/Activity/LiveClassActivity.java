@@ -7,23 +7,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.entertech.edevn.Adapter.TeacherListAdapter;
+import com.entertech.edevn.Model.PojoClass.Instructor;
+import com.entertech.edevn.Model.PojoClass.TeacherListPojo;
 import com.entertech.edevn.Model.TeacherListModel;
 import com.entertech.edevn.Network.Api;
 import com.entertech.edevn.Network.RetrofitClient;
 import com.entertech.edevn.R;
+import com.entertech.edevn.Utils.Utils;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class LiveClassActivity extends AppCompatActivity {
 
     private CardView liveClassDetailsId;
-    private LinearLayoutManager linearLayoutManager;
-    private RecyclerView liveClassRecyclerViewId;
-    TeacherListModel teacherListModel;
-    private Api api;
-    Retrofit retrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +35,6 @@ public class LiveClassActivity extends AppCompatActivity {
         setContentView(R.layout.activity_live_class);
 
         liveClassDetailsId = findViewById(R.id.live_class_details_Id);
-
-        liveClassRecyclerViewId = findViewById(R.id.live_class_teacher_list_recycler_view_id);
-
-        linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        liveClassRecyclerViewId.setLayoutManager(linearLayoutManager);
 
         liveClassDetailsId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,15 +44,7 @@ public class LiveClassActivity extends AppCompatActivity {
             }
         });
 
-        // object create api
-        retrofit = RetrofitClient.getClient();
-        api = retrofit.create(Api.class);
-
-        //api call method getAlTeacherList()
-        getAlTeacherList();
     }
 
-    private void getAlTeacherList() {
 
-    }
 }

@@ -32,7 +32,7 @@ public class TeacherListAdapter extends RecyclerView.Adapter<TeacherListAdapter.
     @Override
     public void onBindViewHolder(@NonNull TeacherListAdapter.ViewHolder holder, int position) {
              holder.liveClassTeacherNameId.setText(Utils.teacherListModelArrayList.get(position).getTeacherName());
-             Picasso.get().load(Utils.teacherListModelArrayList.get(position).getTeacherImage()).placeholder(R.drawable.business_image).into(holder.liveClassTeacherImageId);
+             Picasso.get().load(Utils.teacherListModelArrayList.get(position).getTeacherImage()).placeholder(R.drawable.live_class_teacher_img_1).into(holder.liveClassTeacherImageId);
     }
 
     @Override

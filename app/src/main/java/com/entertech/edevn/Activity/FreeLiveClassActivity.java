@@ -21,8 +21,6 @@ public class FreeLiveClassActivity extends AppCompatActivity {
 
     private ImageView liveClassBackId;
     private LinearLayout bookNowId;
-    private LinearLayoutManager linearLayoutManager;
-    private RecyclerView liveClassRecyclerViewId;
     private Api api;
 
     Retrofit retrofit;
@@ -33,11 +31,6 @@ public class FreeLiveClassActivity extends AppCompatActivity {
 
         liveClassBackId = findViewById(R.id.live_class_back_Id);
         bookNowId = findViewById(R.id.book_now_id);
-
-        liveClassRecyclerViewId = findViewById(R.id.live_class_teacher_list_recycler_view_id);
-
-        linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        liveClassRecyclerViewId.setLayoutManager(linearLayoutManager);
 
         liveClassBackId.setOnClickListener(new View.OnClickListener() {
             @Override
