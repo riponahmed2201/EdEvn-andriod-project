@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#f2f5f9"
     tools:context=".Fragment.ExamFragment">
 
     <TextView
+        android:gravity="center"
         android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Exam Fragment" />
+        android:text="Under Development" />
 
 </FrameLayout>
