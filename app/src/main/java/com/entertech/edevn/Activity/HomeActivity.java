@@ -104,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
 //                           Log.d("Data", "onResponse: " + resumeStudy.getChapterName());
                            resumeStudyInfo = new ResumeStudyInfo(resumeStudy.getId(),resumeStudy.getUserId(),resumeStudy.getCategoryId(),
                                    resumeStudy.getTotalLesson(), resumeStudy.getIsCompletedLesson(), resumeStudy.getChapterName(),
-                                   resumeStudy.getCoverImage(), resumeStudy.getCreatedAt(), resumeStudy.getUpdatedAt());
+                                   resumeStudy.getCoverImage(), resumeStudy.getCreatedAt(), resumeStudy.getUpdatedAt(),resumeStudy.categoryName());
 
                            Utils.resumeStudyInfoArrayList.add(resumeStudyInfo);
 

@@ -34,6 +34,7 @@ public class ResumeStudyAdapter extends RecyclerView.Adapter<ResumeStudyAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.resumeMathSubjectName.setText(Utils.resumeStudyInfoArrayList.get(position).getChapterName());
+        holder.resumeMathSubjectDescription.setText(Utils.resumeStudyInfoArrayList.get(position).getChapterName());
         Picasso.get().load(Utils.resumeStudyInfoArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.resumeMathSubjectImage);
     }
 

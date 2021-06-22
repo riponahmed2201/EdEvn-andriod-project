@@ -2,9 +2,9 @@ package com.entertech.edevn.Model;
 
 public class ResumeStudyInfo {
     Integer id, userId, categoryId,totalLesson, isCompletedLesson;
-    String chapterName, coverImage, createdAt, updatedAt;
+    String chapterName, coverImage, createdAt, updatedAt,categoryName;
 
-    public ResumeStudyInfo(Integer id, Integer userId, Integer categoryId, Integer totalLesson, Integer isCompletedLesson, String chapterName, String coverImage, String createdAt, String updatedAt) {
+    public ResumeStudyInfo(Integer id, Integer userId, Integer categoryId, Integer totalLesson, Integer isCompletedLesson, String chapterName, String coverImage, String createdAt, String updatedAt, String categoryName) {
         this.id = id;
         this.userId = userId;
         this.categoryId = categoryId;
@@ -14,6 +14,7 @@ public class ResumeStudyInfo {
         this.coverImage = coverImage;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.categoryName = categoryName;
     }
 
     public Integer getId() {
@@ -85,6 +86,13 @@ public class ResumeStudyInfo {
     }
 
     public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+    public String categoryName() {
+        return updatedAt;
+    }
+
+    public void categoryName(String updatedAt) {
         this.updatedAt = updatedAt;
     }
 }

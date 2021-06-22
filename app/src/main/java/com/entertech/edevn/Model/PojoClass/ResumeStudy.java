@@ -33,6 +33,9 @@ public class ResumeStudy {
     @SerializedName("cover_image")
     @Expose
     private String coverImage;
+    @SerializedName("category_name")
+    @Expose
+    private String categoryName;
 
     public Integer getId() {
         return id;
@@ -103,6 +106,13 @@ public class ResumeStudy {
     }
 
     public void setCoverImage(String coverImage) {
+        this.coverImage = coverImage;
+    }
+    public String categoryName() {
+        return coverImage;
+    }
+
+    public void categoryName(String coverImage) {
         this.coverImage = coverImage;
     }
 
