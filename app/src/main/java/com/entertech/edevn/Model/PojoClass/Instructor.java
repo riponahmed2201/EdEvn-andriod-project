@@ -18,9 +18,9 @@ public class Instructor {
     @SerializedName("phone")
     @Expose
     private String phone;
-    @SerializedName("created_at")
-    @Expose
-    private String createdAt;
+//    @SerializedName("created_at")
+//    @Expose
+//    private String createdAt;
     @SerializedName("user_image")
     @Expose
     private String userImage;
@@ -57,13 +57,13 @@ public class Instructor {
         this.phone = phone;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
+//    public String getCreatedAt() {
+//        return createdAt;
+//    }
+//
+//    public void setCreatedAt(String createdAt) {
+//        this.createdAt = createdAt;
+//    }
 
     public String getUserImage() {
         return userImage;

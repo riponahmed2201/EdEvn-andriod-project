@@ -55,7 +55,7 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
             free_live_class_subject_name_id = itemView.findViewById(R.id.free_live_class_subject_name_id);
             freeLiveClassImageId = itemView.findViewById(R.id.free_live_class_image_id);
             freeLiveClassChapterNameId = itemView.findViewById(R.id.free_live_class_chapter_name_id);
-            free_live_class_seat_left_id = itemView.findViewById(R.id.free_live_class_seat_left_id);
+            free_live_class_seat_left_id = itemView.findViewById(R.id.free_live_class_total_seat_left_id);
             free_live_class_class_time_id = itemView.findViewById(R.id.free_live_class_class_time_id);
             free_live_class_duration_id = itemView.findViewById(R.id.free_live_class_duration_id);
 
