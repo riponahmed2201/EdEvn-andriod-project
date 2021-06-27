@@ -3,9 +3,11 @@ package com.entertech.edevn.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Patterns;
 import android.view.View;
@@ -36,14 +38,18 @@ public class LoginActivity extends AppCompatActivity {
     private Api api;
     Retrofit retrofit;
     private UserPreference userPreference;
+    private SharedPreferences.Editor editor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activity);
 
+        editor = getSharedPreferences("loginCheck", MODE_PRIVATE).edit();
+
         loginContinueButton = (Button) findViewById(R.id.login_continue_btn_id);
-        editTextEmailOrPhoneNumber = (EditText)  findViewById(R.id.login_email_or_phone_number_id);
+        editTextEmailOrPhoneNumber = (EditText) findViewById(R.id.login_email_or_phone_number_id);
 
         retrofit = RetrofitClient.getClient();
         api = retrofit.create(Api.class);
@@ -54,18 +60,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (!isConnected(LoginActivity.this)){
+                if (!isConnected(LoginActivity.this)) {
                     showCustomDialog();
-                }else {
-                    emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
+                } else {
+                    emailOrPhone = editTextEmailOrPhoneNumber.getText().toString().trim();
 
-                    if (emailOrPhone.isEmpty()){
+                    if (emailOrPhone.isEmpty()) {
                         editTextEmailOrPhoneNumber.setError("Email is required.");
                         editTextEmailOrPhoneNumber.requestFocus();
                         return;
                     }
 
-                    if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()){
+                    if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()) {
                         editTextEmailOrPhoneNumber.setError("Please enter a valid email.");
                         editTextEmailOrPhoneNumber.requestFocus();
                         return;
@@ -81,14 +87,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //Internet connection check method
-    public boolean isConnected(LoginActivity loginActivity){
+    public boolean isConnected(LoginActivity loginActivity) {
         ConnectivityManager connectivityManager = (ConnectivityManager) loginActivity.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo wifiConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         NetworkInfo mobileConn = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 
-        if ((wifiConn != null && wifiConn.isConnected()) || (mobileConn != null && mobileConn.isConnected())){
+        if ((wifiConn != null && wifiConn.isConnected()) || (mobileConn != null && mobileConn.isConnected())) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -101,42 +107,45 @@ public class LoginActivity extends AppCompatActivity {
                 .setPositiveButton("Connect", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                       startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(getApplicationContext(),WelcomeActivity.class));
+                        startActivity(new Intent(getApplicationContext(), WelcomeActivity.class));
                         finish();
                     }
                 });
 
-                AlertDialog alert = builder.create();
-                //Setting the title manually
-                //alert.setTitle("AlertDialogExample");
-                alert.show();
+        AlertDialog alert = builder.create();
+        //Setting the title manually
+        //alert.setTitle("AlertDialogExample");
+        alert.show();
     }
 
     //Create user or SignUp method
-    private void createUser()
-    {
+    private void createUser() {
         Call<SignUpResponse> call = api.createUser(emailOrPhone);
 
         call.enqueue(new Callback<SignUpResponse>() {
             @Override
             public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {
 
-                if (response.code() == 200){
+                if (response.code() == 200) {
                     SignUpResponse signUpResponse = response.body();
 
                     // save user info to userPreference
                     userPreference.saveUser(emailOrPhone);
                     Toast.makeText(LoginActivity.this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-                       // intent.putExtra("email",emailOrPhone);
-                        startActivity(intent);
-                }else{
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    finish();
+                    // intent.putExtra("email",emailOrPhone);
+                    startActivity(intent);
+                    editor.putString("checkLogin", "true");
+                    editor.apply();
+                } else {
                     //response from api
                     SignUpResponse signUpResponse = response.body();
 
@@ -145,8 +154,12 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, "User already exists.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    finish();
                     //intent.putExtra("email",emailOrPhone);
                     startActivity(intent);
+                    editor.putString("checkLogin", "true");
+                    editor.apply();
                 }
             }
 
@@ -155,7 +168,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
 //        SignUpModel signUpModel = new SignUpModel(emailOrPhone);
@@ -221,16 +233,16 @@ public class LoginActivity extends AppCompatActivity {
 //        });
     }
 
-    private void userSignUp(){
-        String emailOrPhone =  editTextEmailOrPhoneNumber.getText().toString().trim();
+    private void userSignUp() {
+        String emailOrPhone = editTextEmailOrPhoneNumber.getText().toString().trim();
 
-        if (emailOrPhone.isEmpty()){
+        if (emailOrPhone.isEmpty()) {
             editTextEmailOrPhoneNumber.setError("Email is required.");
             editTextEmailOrPhoneNumber.requestFocus();
             return;
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(emailOrPhone).matches()) {
             editTextEmailOrPhoneNumber.setError("Please enter a valid email.");
             editTextEmailOrPhoneNumber.requestFocus();
             return;

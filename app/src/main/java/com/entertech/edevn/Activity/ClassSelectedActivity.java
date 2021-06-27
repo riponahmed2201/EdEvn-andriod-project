@@ -12,6 +12,7 @@ import com.entertech.edevn.R;
 public class ClassSelectedActivity extends AppCompatActivity {
 
     private Button startLearningButtonId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,8 @@ public class ClassSelectedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ClassSelectedActivity.this, LoaderClassRoomActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish();
                 startActivity(intent);
             }
         });

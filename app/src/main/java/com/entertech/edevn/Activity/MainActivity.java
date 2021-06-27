@@ -9,7 +9,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -37,10 +39,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private LiveClassFragment liveClassFragment;
     private ProfileFragment profileFragment;
     private Toolbar toolbar;
+    private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        editor= getSharedPreferences("loginCheck",MODE_PRIVATE).edit();
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
@@ -122,6 +126,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            editor.putString("checkLogin","false");
+            editor.apply();
         }
 
 //        else if (id == R.id.update_profile_menu_id)

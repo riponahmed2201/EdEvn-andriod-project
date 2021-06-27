@@ -22,8 +22,9 @@ public class LoaderClassRoomActivity extends AppCompatActivity {
                 try {
                     sleep(3000);
                     Intent intent = new Intent(LoaderClassRoomActivity.this, LoginActivity.class);
-                    startActivity(intent);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     finish();
+                    startActivity(intent);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

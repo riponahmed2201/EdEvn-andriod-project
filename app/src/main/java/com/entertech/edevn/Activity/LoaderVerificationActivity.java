@@ -12,6 +12,7 @@ import static java.lang.Thread.sleep;
 public class LoaderVerificationActivity extends AppCompatActivity {
 
     private String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,7 @@ public class LoaderVerificationActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        if (bundle != null){
+        if (bundle != null) {
             email = bundle.getString("email");
         }
         Thread thread = new Thread(new Runnable() {
@@ -28,9 +29,10 @@ public class LoaderVerificationActivity extends AppCompatActivity {
                 try {
                     sleep(4000);
                     Intent intent = new Intent(LoaderVerificationActivity.this, OTPVerificationActivity.class);
-                    intent.putExtra("email",email);
-                    startActivity(intent);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     finish();
+                    intent.putExtra("email", email);
+                    startActivity(intent);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
