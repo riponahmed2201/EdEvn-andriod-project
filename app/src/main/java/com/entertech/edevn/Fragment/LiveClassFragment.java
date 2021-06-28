@@ -89,7 +89,7 @@ public class LiveClassFragment extends Fragment {
                             //Log.d("Data", "onResponse: " + instructor.getName());
                             teacherListModel = new TeacherListModel(instructor.getId(),instructor.getName(),instructor.getEmail(),instructor.getPhone(), instructor.getUserImage());
                             Utils.teacherListModelArrayList.add(teacherListModel);
-                            Log.d("Data", "onResponse: " + instructor.getName());
+                            Log.d("Data", "onResponse: " + Utils.teacherListModelArrayList);
                         }
 
                         TeacherListAdapter teacherListAdapter =  new TeacherListAdapter(getContext());

@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
                     // user info store userPreference
                     userPreference.saveUser(emailOrPhone);
 
-                    Toast.makeText(LoginActivity.this, "User already exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Logged in successfully.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     finish();
@@ -169,68 +169,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-//        SignUpModel signUpModel = new SignUpModel(emailOrPhone);
-//        Call<SignUp> call = retrofitClientApi.createUser("admin@gmail.com");
-//        Call call = api.createUser(emailOrPhone);
-
-
-//        Call<ResponseBody> call = api.createUser(new SignUpModel(emailOrPhone));
-//
-//        call.enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//
-////                Log.d("RRR: ", response.code() + "  Message: " +response.message());
-//
-//                String s = null;
-//
-//                try {
-//                    if (response.code() == 200){
-//
-//                        s = response.body().string();
-//
-//                        Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-//                        intent.putExtra("email",emailOrPhone);
-//                        startActivity(intent);
-//
-//                    }else{
-//                        s = response.errorBody().string();
-//                    }
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                if (s != null){
-//                    try {
-//                        JSONObject jsonObject = new JSONObject(s);
-//                        Toast.makeText(LoginActivity.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-////
-////                if (response.code() == 200)
-////                {
-////                    Toast.makeText(LoginActivity.this, "Signup successfully.", Toast.LENGTH_SHORT).show();
-////                    Intent intent = new Intent(LoginActivity.this, LoaderVerificationActivity.class);
-////                    intent.putExtra("email",emailOrPhone);
-////                    startActivity(intent);
-////                }
-////              else  if (response.code() == 409){
-////                    Toast.makeText(LoginActivity.this, "OK", Toast.LENGTH_SHORT).show();
-////                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-////                    intent.putExtra("email",emailOrPhone);
-////                    startActivity(intent);
-////                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 
     private void userSignUp() {
