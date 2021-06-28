@@ -82,7 +82,7 @@ public class FreeLiveClassActivity extends AppCompatActivity {
                     FreeLivePojoClass freeLivePojoClass = response.body();
                     if (freeLivePojoClass.getCourses().size() > 0){
                         for (Course course: freeLivePojoClass.getCourses()){
-                            Log.d("Data", "onResponse: " + course.getCategoryName());
+                            Log.d("Data", "onResponse: " + course.getTotalSeats());
                             FreeLiveClassModel freeLiveClassModel = new FreeLiveClassModel(course.getCourseId(),course.getCategoryId(),course.getCoursePrice(),course.getIsDownloadable(),course.getTotalSeats(),course.getCourseType(),course.getCourseTitle(),course.getPublishType(),course.getCategoryName(),course.getLavel(),course.getDuration(),course.getLanguage(),course.getPaymentType(),course.getClassTime(),course.getCoverImage());
                             Utils.freeLiveClassModelArrayList.add(freeLiveClassModel);
                         }

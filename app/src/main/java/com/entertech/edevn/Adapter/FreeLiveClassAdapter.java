@@ -33,9 +33,9 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
     public void onBindViewHolder(@NonNull FreeLiveClassAdapter.ViewHolder holder, int position) {
                 holder.freeLiveClassChapterNameId.setText(Utils.freeLiveClassModelArrayList.get(position).getCourseTitle());
                 holder.free_live_class_subject_name_id.setText(Utils.freeLiveClassModelArrayList.get(position).getCategoryName());
-//             holder.free_live_class_class_time_id.setText(Utils.freeLiveClassModelArrayList.get(position).getClassTime());
-               // holder.free_live_class_duration_id.setText(Utils.freeLiveClassModelArrayList.get(position).getDuration());
-                //holder.free_live_class_seat_left_id.setText(Utils.freeLiveClassModelArrayList.get(position).getTotalSeats());
+//             holder.freeLiveClassTimeId.setText(Utils.freeLiveClassModelArrayList.get(position).getClassTime());
+                holder.freeLiveClassDurationId.setText(Utils.freeLiveClassModelArrayList.get(position).getDuration());
+                holder.freeLiveClassSeatLeftId.setText(Integer.toString(Utils.freeLiveClassModelArrayList.get(position).getTotalSeats()));
              Picasso.get().load(Utils.freeLiveClassModelArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.freeLiveClassImageId);
     }
 
@@ -47,7 +47,11 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private final ImageView freeLiveClassImageId;
-        private TextView free_live_class_subject_name_id,freeLiveClassChapterNameId, free_live_class_seat_left_id,free_live_class_class_time_id,free_live_class_duration_id;
+        private TextView free_live_class_subject_name_id;
+        private TextView freeLiveClassChapterNameId;
+        private TextView freeLiveClassSeatLeftId;
+        private TextView freeLiveClassTimeId;
+        private TextView freeLiveClassDurationId;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,9 +59,9 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
             free_live_class_subject_name_id = itemView.findViewById(R.id.free_live_class_subject_name_id);
             freeLiveClassImageId = itemView.findViewById(R.id.free_live_class_image_id);
             freeLiveClassChapterNameId = itemView.findViewById(R.id.free_live_class_chapter_name_id);
-            free_live_class_seat_left_id = itemView.findViewById(R.id.free_live_class_total_seat_left_id);
-            free_live_class_class_time_id = itemView.findViewById(R.id.free_live_class_class_time_id);
-            free_live_class_duration_id = itemView.findViewById(R.id.free_live_class_duration_id);
+            freeLiveClassSeatLeftId = itemView.findViewById(R.id.free_live_class_total_seat_left_id);
+            freeLiveClassTimeId = itemView.findViewById(R.id.free_live_class_class_time_id);
+            freeLiveClassDurationId = itemView.findViewById(R.id.free_live_class_duration_id);
 
         }
     }
