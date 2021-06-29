@@ -2,12 +2,14 @@ package com.entertech.edevn.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -40,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ProfileFragment profileFragment;
     private Toolbar toolbar;
     private SharedPreferences.Editor editor;
+
+    AlertDialog.Builder exitAlertDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,7 +154,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }else {
-            super.onBackPressed();
+//            super.onBackPressed();
+            loadExitDialog();
         }
     }
 
@@ -168,5 +173,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+    }
+
+    public void loadExitDialog(){
+        exitAlertDialog = new AlertDialog.Builder(MainActivity.this);
+        exitAlertDialog.setMessage("Do you want to exit ?");
+        exitAlertDialog.setTitle("EDEVN");
+        exitAlertDialog.setCancelable(false);
+        exitAlertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        exitAlertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+               dialog.cancel();
+            }
+        });
+
+        AlertDialog alertDialog = exitAlertDialog.create();
+        alertDialog.show();
     }
 }
