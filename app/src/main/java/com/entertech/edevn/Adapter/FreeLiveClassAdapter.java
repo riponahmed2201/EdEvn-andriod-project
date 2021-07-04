@@ -33,7 +33,7 @@ public class FreeLiveClassAdapter extends RecyclerView.Adapter<FreeLiveClassAdap
     public void onBindViewHolder(@NonNull FreeLiveClassAdapter.ViewHolder holder, int position) {
                 holder.freeLiveClassChapterNameId.setText(Utils.freeLiveClassModelArrayList.get(position).getCourseTitle());
                 holder.free_live_class_subject_name_id.setText(Utils.freeLiveClassModelArrayList.get(position).getCategoryName());
-//             holder.freeLiveClassTimeId.setText(Utils.freeLiveClassModelArrayList.get(position).getClassTime());
+                holder.freeLiveClassTimeId.setText(Utils.freeLiveClassModelArrayList.get(position).getClassTime());
                 holder.freeLiveClassDurationId.setText(Utils.freeLiveClassModelArrayList.get(position).getDuration());
                 holder.freeLiveClassSeatLeftId.setText(Integer.toString(Utils.freeLiveClassModelArrayList.get(position).getTotalSeats()));
              Picasso.get().load(Utils.freeLiveClassModelArrayList.get(position).getCoverImage()).placeholder(R.drawable.business_image).into(holder.freeLiveClassImageId);
